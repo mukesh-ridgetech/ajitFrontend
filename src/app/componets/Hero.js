@@ -106,6 +106,7 @@ const Hero = () => {
   const openModal2 = () => {
     setIsModalOpen2(true);
     setIsModalOpen(false);
+    closeModal1();
     setAnswers({}); // Reset answers
     setCurrentQuestion(0); // Go back to the first question
 
@@ -186,7 +187,7 @@ const Hero = () => {
                 </h4>
 
                 <div className="hero-button-group">
-                  <button className="hero-button1" onClick={openModal}>
+                  <button className="hero-button1" onClick={openModal1}>
                     Take a Quiz
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +274,7 @@ const Hero = () => {
                 </h4>
 
                 <div className="hero-button-group">
-                  <button className="hero-button1" onClick={openModal}>
+                  <button className="hero-button1" onClick={openModal1}>
                     Take a Quiz
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -360,7 +361,7 @@ const Hero = () => {
                 </h4>
 
                 <div className="hero-button-group">
-                  <button className="hero-button1" onClick={openModal}>
+                  <button className="hero-button1" onClick={openModal1}>
                     Take a Quiz
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -486,7 +487,7 @@ const Hero = () => {
         </div>
       )} */}
 
-      <Modal
+      {/* <Modal
         open={isModalOpen}
         onCancel={closeModal}
         footer={null}
@@ -519,7 +520,7 @@ const Hero = () => {
             <p className="label purple">Corporate</p>
           </div>
         </div>
-      </Modal>
+      </Modal> */}
 
       <Modal
         open={isModalOpen2}
@@ -682,16 +683,33 @@ const Hero = () => {
         {isOpen1 && (
           <div className="modal-overlay">
             <div className="modal-content">
-              <h2>Custom Modal</h2>
-              <p>
-                This is a custom modal with a black background and blue border.
-              </p>
-              <button
+              <span
                 onClick={closeModal1}
-                style={{ padding: "10px 20px", cursor: "pointer" }}
+                className="cross-button"
+                style={{ color: "#fff", fontSize: "18px" }}
               >
-                Close
-              </button>
+                ✖
+              </span>
+              <div className="modal-body">
+                <div className="option" onClick={openModal2}>
+                  <div className="circle">
+                    <img
+                      src="/images/f1.png" // Replace with actual "Individual" icon
+                      alt="Individual"
+                    />
+                  </div>
+                  <p className="label">Individual</p>
+                </div>
+                <div className="option" onClick={openModal2}>
+                  <div className="circle">
+                    <img
+                      src="/images/f2.png" // Replace with actual "Corporate" icon
+                      alt="Corporate"
+                    />
+                  </div>
+                  <p className="label purple">Corporate</p>
+                </div>
+              </div>
             </div>
           </div>
         )}

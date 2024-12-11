@@ -1418,6 +1418,7 @@ body {
 }
 
 .modal-body {
+  position: relative;
   display: flex;
   gap: 80px;
   margin-top: 20px;
@@ -1610,6 +1611,7 @@ input[type="radio"] {
 
 /* Modal Body */
 .modal-body {
+  position: relative;
   display: flex;
   gap: 30px;
   justify-content: center;
@@ -1700,11 +1702,18 @@ input[type="radio"] {
   padding: 20px;
   text-align: center;
   width: 400px;
-  height: 300px;
+  height: 200px;
 
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
 }
 
+.cross-button {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: blue;
+}
 /* quize css */
 /* Quiz Application Styles */
 
