@@ -46,7 +46,7 @@ export default function Home() {
   ];
   return (
     <div>
-      <Navbar />
+      <Navbar type={"Home"} />
       {/* <CustomModel /> */}
       <Hero />
       <CoachingPower />

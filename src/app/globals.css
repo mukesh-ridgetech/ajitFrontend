@@ -234,10 +234,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-.navbar-link-item ul li {
-  /* transition: 0.5s; */
-}
-
 .navbar-link-item ul li:hover {
   color: #8e5af8;
   border-bottom: 1px solid #8e5af8;
@@ -304,6 +300,24 @@ body {
   height: 95vh;
 }
 
+.hero-main-section1 {
+  /* border: 1px solid blue; */
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
+  background: linear-gradient(
+    256deg,
+    #8750f7 -37.96%,
+    rgba(115, 67, 210, 0) 97.52%
+  );
+  height: 100vh;
+  /* filter: blur(75px); */
+}
+
+.crosel-item1 {
+  width: 100%;
+  height: 100vh;
+}
 .react-multiple-carousel__arrow {
   display: none;
 }
@@ -319,10 +333,20 @@ body {
   padding-top: 20%;
 }
 
+.item-main1 {
+  padding-top: 5%;
+}
+
 .hero-button-group {
   display: flex;
   gap: 20px;
   padding-top: 13%;
+}
+
+.hero-button-group1 {
+  display: flex;
+  gap: 20px;
+  padding-top: 40%;
 }
 
 .hero-button1 {
@@ -998,6 +1022,7 @@ body {
 }
 /* blog section */
 .blog-main-container {
+  position: relative;
   margin-top: 40px;
   width: 100%;
   padding-left: 60px;
@@ -1114,6 +1139,7 @@ body {
 /* testinomial section */
 
 .testinomial-main-container {
+  position: relative;
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 28px;
@@ -1823,4 +1849,295 @@ input[type="radio"] {
 
 .quize-ul-tag ul li::marker {
   color: white !important;
+}
+
+/* blog page starting hear */
+
+/* blog item */
+.section-item-main-container {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Dynamic columns */
+  gap: 20px; /* Adds spacing between items */
+}
+
+/* blog section */
+.blog-crosel-box-item1-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  padding-top: 20%;
+  gap: 20px;
+  /* max-width: 368px; */
+  height: 600px;
+  padding-bottom: 10%;
+  flex: 1 0 0;
+  align-self: stretch;
+  transition: all 0.8s ease-in-out;
+  transition: transform 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
+  border-radius: 15px;
+  cursor: pointer;
+  /* width: 400px; */
+  /* background: #000; */
+  /* background: url("/images/bg1.png") lightgray -16.117px 0px / 108.759% 100% no-repeat; */
+}
+
+.blog-crosel-box-item1-box {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease; /* Transition for all properties */
+}
+
+.blog-crosel-box-item1-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transition: background-color 0.5s ease 0.2s; /* Add delay to color transition */
+  z-index: 1; /* Place this above the background image */
+}
+
+.blog-crosel-box-item1-box .blog-title,
+.blog-crosel-box-item1-box .marque-container,
+.blog-crosel-box-item1-box .crosel-button {
+  position: relative;
+  z-index: 2; /* Ensure text and buttons stay above the background */
+}
+
+.blog-crosel-box-item1-box:hover {
+  background-color: transparent; /* Remove background color */
+}
+
+.blog-crosel-box-item1-box:hover::before {
+  background-color: var(
+    --dynamic-color
+  ); /* Add the background color on hover */
+}
+
+.blog-crosel-box-item1-box:hover {
+  transform: translateY(10px); /* Move the background image down */
+}
+
+.blog-crosel-box-item1-box:hover {
+  background: #007bff;
+  transform: scale(1.05);
+  border-radius: 15px;
+}
+
+.blog-crosel-box-item1-box:hover .marquee-text {
+  position: block;
+  width: 300px;
+  height: 80px;
+  color: black;
+  display: flex; /* Make it visible and center the text */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transform: translateX(50%); /* Start off-screen (right) */
+  animation: move-div 0.3s linear forwards; /* Animation for movement */
+}
+.blog-crosel-box-item1-box:hover .blog-title {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.blog-crosel-box-item1-box:hover .crosel-button {
+  display: flex;
+  margin-left: 50%;
+  width: 50%;
+  padding: 10.53px 35px;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #8750f7 0%, #2a1454 51%, #8750f7 100%);
+  transform: translateY(-20%); /* Start off-screen (right) */
+  animation: btn-div 0.3s linear forwards; /* Animation for movement */
+}
+
+.section-item {
+  width: 30%;
+  border: 1px solid red;
+}
+
+/* blogItem page */
+/* hero */
+.blogItem-hero-container {
+  width: 100%;
+  background: linear-gradient(
+    256deg,
+    #8750f7 -38.01%,
+    rgba(115, 67, 210, 0) 66.26%
+  );
+
+  height: 70vh;
+}
+
+.blogItem-hero-content-section {
+  width: 100%;
+  padding-left: 90px;
+  display: flex;
+  /* gap: 10%; */
+}
+
+.blogitem-image-section {
+  width: 40%;
+}
+
+.blogItem-heding-box {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+}
+
+.blogItem-conten-heading {
+  width: 60%;
+  color: #fff;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 55px; /* 114.583% */
+}
+
+/* blog content Compponent section */
+
+.blog-content-main-section {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.blog-content-main-section-content {
+  display: flex;
+  width: 100%;
+  padding: 40px 100px 24px 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 15px;
+  background: #b7b7b7;
+}
+.blog-content-heading-box {
+  width: 100%;
+}
+
+.blog-content-heading-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.blog-content-heading-text {
+  color: #222;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 180% */
+}
+
+.blog-content-para-text {
+  color: #222;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+}
+
+/* custom button */
+.carousel-button-group {
+  display: flex;
+  justify-content: flex-end;
+  /* Align items to the right */
+  position: absolute;
+  /* Ensure it overlays the carousel */
+  /* Adjust the top position */
+  right: 20px;
+  /* Adjust the right position */
+  top: 5px;
+  z-index: 10;
+  /* Ensure it appears above the carousel */
+
+  /* position: absolute;
+  right: 3%;
+  top: 4%; */
+  transform: translate(-50%, -50%);
+}
+
+.carousel-button-group button {
+  width: 50px;
+  height: 50px;
+  /* Change button background color */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  /* Rounded corners */
+  margin-left: 5px;
+  /* Space between buttons */
+  cursor: pointer;
+
+  border-radius: 50%;
+  background-color: white;
+}
+
+.carousel-button-group button.disable {
+  /* Gray color for disabled button */
+  cursor: not-allowed;
+  /* Not-allowed cursor */
+}
+
+.carousel-button-group button:hover:not(.disable) {
+  /* Darker blue on hover */
+}
+
+.carousel-button-group {
+  position: absolute;
+  top: 50%;
+  width: 100%; /* Ensure the group spans the full width of the carousel */
+  transform: translateY(-50%); /* Center vertically */
+  display: flex;
+  justify-content: space-between; /* Align buttons to the left and right */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.carousel-button-group button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background-color: #b8b8b8;
+  cursor: pointer;
+}
+
+.carousel-button-group button.disable {
+  cursor: not-allowed;
+}
+
+.carousel-button-group button.left {
+  left: 25px; /* Align the left button to the left */
+}
+
+.carousel-button-group button.right {
+  right: 20px; /* Align the right button to the right */
 }

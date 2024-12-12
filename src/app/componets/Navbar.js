@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 
-const Navbar = () => {
-  const [active, setActive] = useState("Home");
+const Navbar = ({ type }) => {
+  const [active, setActive] = useState(type);
 
   const handleActive = (item) => {
     setActive(item);
@@ -20,7 +20,7 @@ const Navbar = () => {
                 handleActive("Home");
               }}
             >
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
 
             <li
@@ -47,7 +47,7 @@ const Navbar = () => {
               }}
               className={` ${active === "Blog" ? "active" : ""}`}
             >
-              <a href="#">Blog</a>
+              <a href="/blog">Blog</a>
             </li>
           </ul>
         </div>
