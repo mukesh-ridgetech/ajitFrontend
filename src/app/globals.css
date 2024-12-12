@@ -291,13 +291,13 @@ body {
     #8750f7 -37.96%,
     rgba(115, 67, 210, 0) 97.52%
   );
-  height: 95vh;
+  height: auto;
   /* filter: blur(75px); */
 }
 
 .crosel-item {
   width: 100%;
-  height: 95vh;
+  height: auto;
 }
 
 .hero-main-section1 {
