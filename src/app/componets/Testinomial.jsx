@@ -8,11 +8,11 @@ const Testinomial = () => {
   const data = [
     {
       id: 1,
-      title: "shfgksdjgh",
-      heding: "lorem10 ksjf ksjdgfk sdkfj ",
+      title: "Ashish Syngal",
+      heding: "SVP, Customer Success ProHance ",
       content:
-        "As you will agree, we all have the potential to grow and achieve remarkable things. However, over time, we often develop limiting",
-      image: "/images/bh3.png",
+        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
+      image: "/images/t1.png",
       bgColor: "#4caf50",
       rating: 5,
     },
@@ -20,9 +20,9 @@ const Testinomial = () => {
     {
       id: 2,
       title: "shfgksdjgh",
-      heding: "lorem10 ksjf ksjdgfk sdkfj ",
+      heding: "we all have the potential to grow and achieve",
       content:
-        "As you will agree, we all have the potential to grow and achieve remarkable things. However, over time, we often develop limiting",
+        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
       image: "/images/bg1.png",
       bgColor: "#4caf50",
       rating: 4,
@@ -31,9 +31,9 @@ const Testinomial = () => {
     {
       id: 3,
       title: "shfgksdjgh",
-      heding: "lorem10 ksjf ksjdgfk sdkfj ",
+      heding: "we all have the potential to grow and achieve",
       content:
-        "As you will agree, we all have the potential to grow and achieve remarkable things. However, over time, we often develop limiting",
+        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
       image: "/images/bg2.png",
       bgColor: "#4caf50",
       rating: 3,
@@ -42,9 +42,20 @@ const Testinomial = () => {
     {
       id: 4,
       title: "shfgksdjgh",
-      heding: "lorem10 ksjf ksjdgfk sdkfj ",
+      heding: "we all have the potential to grow and achieve",
       content:
-        "As you will agree, we all have the potential to grow and achieve remarkable things. However, over time, we often develop limiting",
+        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
+      image: "/images/bh3.png",
+      bgColor: "#4caf50",
+      rating: 5,
+    },
+
+    {
+      id: 4,
+      title: "shfgksdjgh",
+      heding: "we all have the potential to grow and achieve",
+      content:
+        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
       image: "/images/bh3.png",
       bgColor: "#4caf50",
       rating: 5,
@@ -146,7 +157,9 @@ const Testinomial = () => {
                   <div className="testinomial-content">
                     <h3 className="testinomial-title">{item?.title}</h3>
                     <h4 className="testinomial-heading">{item?.heding}</h4>
-                    <p className="para">{item?.content}</p>
+                    <p className="para" style={{ marginBottom: "10px" }}>
+                      {item?.content}
+                    </p>
 
                     <div className="testinomial-rating">
                       {Array.from({ length: item?.rating }).map((_, index) => (

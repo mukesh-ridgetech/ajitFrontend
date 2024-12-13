@@ -5,6 +5,15 @@ const BookDiscovery = () => {
   const [selectedProgram, setSelectedProgram] = useState("");
   const [selectedCouching, setSelectedCouching] = useState("");
 
+  const [selectedType, setSelectedType] = useState(""); // Tracks the selected radio button
+  const [displayCorporateInput, setDisplayCorporateInput] = useState(false); // Tracks whether to show additional input
+
+  const handleSelection = (event) => {
+    const { value } = event.target;
+    setSelectedType(value);
+    setDisplayCorporateInput(value === "corporate");
+  };
+
   const handleType = (event) => {
     setSelectedProgram(event.target.value);
   };
@@ -34,35 +43,41 @@ const BookDiscovery = () => {
 
               <div className="container-select">
                 <h3 className="select-option-label">Select a Coaching Type</h3>
-                <div className="radio-group">
-                  <label className="radio-option">
-                    <input
-                      type="radio"
-                      name="coachingtype"
-                      value="individual"
-                      checked={setSelectedProgram === "individual"}
-                      onChange={handleType}
-                    />
-                    Individual
-                  </label>
-                  <label className="radio-option">
-                    <input
-                      type="radio"
-                      name="coachingtype"
-                      value="corporate"
-                      checked={setSelectedProgram === "corporate"}
-                      onChange={handleType}
-                    />
-                    Corporate
-                  </label>
+                <div className="radio-group1">
+                  <div>
+                    <label className="radio-option">
+                      <input
+                        type="radio"
+                        name="coachingType"
+                        value="individual"
+                        checked={selectedType === "individual"}
+                        onChange={handleSelection}
+                      />
+                      Individual
+                    </label>
+                    <label className="radio-option">
+                      <input
+                        type="radio"
+                        name="coachingType"
+                        value="corporate"
+                        checked={selectedType === "corporate"}
+                        onChange={handleSelection}
+                      />
+                      Corporate
+                    </label>
+                  </div>
 
-                  {selectedCouching === "corporate" ? (
-                    <>
-                      <input type="text" />
-                    </>
-                  ) : (
-                    ""
-                  )}
+                  <div>
+                    {displayCorporateInput && (
+                      <div className="corporate-class">
+                        <input
+                          type="text"
+                          placeholder="Enter Company"
+                          className="corporate-input"
+                        />
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 

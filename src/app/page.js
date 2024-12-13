@@ -18,19 +18,20 @@ import CustomModel from "./componets/CustomModel";
 export default function Home() {
   var faqs = [
     {
-      question: "What services does Ridge Tech Corporation provide?",
+      question: "Is it worth investing in coaching?",
       answer:
-        "Ridge Tech Corporation offers a range of services, including Data Intelligence & Automation, Robotics Process Automation, Wireframing & Prototyping, App Development, SaaS Solutions, Enterprise Solutions, and On-Demand Solutions.",
+        "The value of coaching can be significant in terms of personal and professional growth. While there may be an initial investment, the long-term benefits can outweigh the cost. Consider the potential return on investment in terms of increased productivity, improved decision-making, and overall self-fulfillment.",
     },
     {
-      question: "What industries does Ridge Tech Corporation serve?",
+      question:
+        " How is coaching different from Mentoring/Training/Counselling/Therapy?",
       answer:
-        "We cater to a diverse range of industries, including Healthcare, Fintech, Real Estate, eCommerce, Fitness, Restaurants, Travel, Sports, Social Networking, Education, Entertainment, and Logistics.",
+        "Coaching, mentoring, training, counseling, and therapy are all distinct approaches to personal and professional development. Coaching focuses on goal achievement and future-oriented development, while mentoring involves sharing experience and advice. Training emphasizes skill acquisition and knowledge transfer, while counseling and therapy address emotional and psychological well-being. Understanding these differences can help individuals choose the most appropriate approach for their specific needs.",
     },
     {
-      question: "How can I connect with Ridge Tech Corporation?",
+      question: "Is coaching confidential?",
       answer:
-        "You can connect with us by clicking on the Connect With Our Expert button on our homepage or through our contact page.",
+        " Yes, coaching is confidential. Coaches are bound by ethical codes to maintain client privacy and confidentiality.",
     },
     {
       question: "What makes Ridge Tech Corporation unique?",
@@ -39,9 +40,21 @@ export default function Home() {
     },
 
     {
-      question: "What makes Ridge Tech Corporation unique?",
+      question: "How long does coaching typically last?",
       answer:
-        "With a 97% client retention rate, Ridge Tech Corporation is trusted by over 60 satisfied clients and has delivered 100+ custom web and mobile app solutions. Our team of digital transformation experts offers tailored solutions to businesses of all sizes.",
+        "The duration of coaching can vary depending on the client's goals and needs. Coaching provides meaningful and sustainable results in 9-12 months. While frequency of sessions may vary, we suggest 60-90 mins sessions every month. Therefore, an individual should plan for 9-12 sessions to achieve desired results.",
+    },
+
+    {
+      question: "Can coaching be done online?",
+      answer:
+        "Yes, coaching sessions can be conducted online, in-person, or a combination of both to accommodate your busy schedule or location.",
+    },
+
+    {
+      question: " How much does coaching cost?",
+      answer:
+        "Coaching fees can vary depending on the length of engagement and number of sessions. It's important to discuss pricing and payment terms upfront with the coach.",
     },
   ];
   return (

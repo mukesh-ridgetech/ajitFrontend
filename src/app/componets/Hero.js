@@ -35,27 +35,39 @@ const Hero = () => {
 
     {
       id: 2,
-      question:
-        "What area of your life would you like the most clarity and direction in?",
+      question: "How do you like to work towards personal growth?",
       options: [
-        "Defining clear goals and identifying actionable steps to pursue them.",
-        "Building a meaningful career that aligns with my passions and core values.",
-        "Achieving financial security and creating the life I envision.",
+        "Engaging in self-reflection and seeking personalized guidance to uncover my path.",
+        "Working with a coach or mentor who provides accountability and support in reaching my goals.",
+        "Embracing lifelong learning to adapt and thrive across various life areas, such as career, relationships, spirituality, and finances.",
         "Harmonizing personal and professional priorities for a more balanced and fulfilling life.",
-        "Finding purpose and building a deeper sense of self and identity.",
+        "Seeking immersive experiences that reignite my passions and focus on holistic growth.",
       ],
     },
 
     {
       id: 3,
       question:
-        "What area of your life would you like the most clarity and direction in?",
+        "What is your belief system with respect to your personal and professional growth?",
       options: [
-        "Defining clear goals and identifying actionable steps to pursue them.",
-        "Building a meaningful career that aligns with my passions and core values.",
-        "Achieving financial security and creating the life I envision.",
+        "I believe in continuous growth and that meaningful achievements come from consistent effort and evolution.",
+        "Life’s goals and purpose are constantly evolving, and I need to invest time in self-reflection and skill enhancement.",
+        "Past experiences shape limiting beliefs; regular guidance and support help me unlock my full potential.",
         "Harmonizing personal and professional priorities for a more balanced and fulfilling life.",
-        "Finding purpose and building a deeper sense of self and identity.",
+        "Time is a precious resource, and I must focus on high-impact actions to achieve my best self.",
+      ],
+    },
+
+    {
+      id: 4,
+      question:
+        "What kind of support do you feel would be most beneficial for your growth journey?",
+      options: [
+        "Structured guidance with actionable steps and regular check-ins.",
+        "A listening ear and someone to challenge my thought process.",
+        "Tools and resources to improve specific skills or areas of my life.",
+        "Harmonizing personal and professional priorities for a more balanced and fulfilling life.",
+        "Freedom to explore and experiment with occasional feedback.",
       ],
     },
     // Add more questions here
@@ -254,8 +266,15 @@ const Hero = () => {
                   </button>
                 </div>
               </div>
-
-              <img src="/images/h1.png" alt="" className="image-class" />
+              <div className="imagesdlkfjsldf" style={{ marginTop: "1.5%" }}>
+                <Image
+                  src="/images/h1.png"
+                  alt="Description of the image"
+                  width={700}
+                  height={300}
+                />
+              </div>
+              {/* <img src="/images/h1.png" alt="" className="image-class" /> */}
             </div>
           </div>
 
@@ -342,7 +361,14 @@ const Hero = () => {
                 </div>
               </div>
 
-              <img src="/images/h1.png" alt="" className="image-class" />
+              <div className="imagesdlkfjsldf">
+                <Image
+                  src="/images/h5.png"
+                  alt="Description of the image"
+                  width={680}
+                  height={300}
+                />
+              </div>
             </div>
           </div>
 
@@ -429,12 +455,14 @@ const Hero = () => {
                 </div>
               </div>
 
-              <img
-                className="image-class"
-                src="/images/h1.png"
-                alt=""
-                // style={{ height: "90vh", zIndex: "20", marginTop: "10vh" }}
-              />
+              <div className="imagesdlkfjsldf">
+                <Image
+                  src="/images/h6.png"
+                  alt="Description of the image"
+                  width={680}
+                  height={300}
+                />
+              </div>
             </div>
           </div>
           {/* <div className="crosel-item">

@@ -7,7 +7,7 @@ const Elevate = () => {
       {/* Background Video */}
       <video className="elevate__video-bg" autoPlay loop muted>
         <source src="/images/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        <h4 className="evaluate">Elevate Every Aspect of Your Life</h4>
       </video>
 
       {/* Overlay Content */}

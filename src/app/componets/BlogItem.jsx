@@ -44,7 +44,7 @@ const BlogItem = () => {
     redirect("/blogItem");
   };
 
-  const colors = ["#4caf50", "#2196F3", "#FF9800"];
+  const colors = ["#D2B3DB", "#767BF3", "#F5CE67"];
   return (
     <div className="main-container">
       <div className="section-item-main-container">

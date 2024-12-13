@@ -59,7 +59,7 @@ const Blog = () => {
       slidesToSlide: 1,
     },
   };
-  const colors = ["#4caf50", "#2196F3", "#FF9800"];
+  const colors = ["#D2B3DB", "#767BF3", "#F5CE67"];
 
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     const {
