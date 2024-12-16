@@ -15,10 +15,14 @@ const FAQ = ({ faqs }) => {
           key={index}
           className={`py-[15px] ${
             activeIndex === index
-              ? "bg-gradient-to-r from-purple-700 to-purple-900 text-white rounded-md"
+              ? " custom-gradient text-white rounded-md"
               : "bg-[#140C1C]"
           }`}
-          style={{ marginBottom: "10px", borderRadius: "10px" }}
+          style={{
+            marginBottom: "10px",
+            borderRadius: "10px",
+            // background: "linear-gradient(to right, #2A1454, #8750F7)",
+          }}
         >
           <div
             onClick={() => toggleFAQ(index)}

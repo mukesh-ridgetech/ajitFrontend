@@ -1,7 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { redirect } from "next/navigation";
+import { baseurl } from "../helper/Helper";
+import { useRouter } from "next/navigation";
 const BlogItem = () => {
+  const [blogdata, setBlogData] = useState();
   const data = [
     {
       id: 1,
@@ -40,22 +44,43 @@ const BlogItem = () => {
     },
   ];
 
-  const handleNavigate = () => {
-    redirect("/blogItem");
+  const fetchBlog = async () => {
+    try {
+      const response = await axios.get(baseurl + "/api/blog/getAllBlog");
+      console.log(response.data);
+
+      if (response.data) {
+        setBlogData(response.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlog();
+  }, []);
+
+  // const handleNavigate = (item) => {
+  //   redirect("/blogItem");
+  // };
+  const router = useRouter();
+  const handleNavigate = (id) => {
+    router.push(`/blogItem/${id}`); // Navigate to the dynamic route with the id
   };
 
   const colors = ["#D2B3DB", "#767BF3", "#F5CE67"];
   return (
     <div className="main-container">
       <div className="section-item-main-container">
-        <div className="section-container" onClick={handleNavigate}>
-          {data?.map((item, index) => {
+        <div className="section-container">
+          {blogdata?.map((item, index) => {
             const colorIndex = index % colors.length;
             return (
               <div
-                key={item?.id}
+                key={item?._id}
                 style={{
-                  backgroundImage: `url(${item?.image})`,
+                  backgroundImage: `url(${baseurl}${item?.image})`,
                   "--dynamic-color": colors[colorIndex],
                 }}
                 className=" blog-crosel-box-item1-box bg-cover bg-center"
@@ -63,10 +88,17 @@ const BlogItem = () => {
                 <div className="blog-title">{item?.title}</div>
 
                 <div className="marque-container">
-                  <div className="marquee-text">{item?.content}</div>
+                  <div className="marquee-text">
+                    {item?.metaTags[0]?.content}
+                  </div>
                 </div>
 
-                <button className="crosel-button">
+                <button
+                  className="crosel-button"
+                  onClick={() => {
+                    handleNavigate(`${item?._id}`);
+                  }}
+                >
                   Explore
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

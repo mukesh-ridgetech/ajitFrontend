@@ -119,17 +119,35 @@ const BookDiscovery = () => {
                 </div>
               </div>
 
+              <div>
+                <textarea
+                  id="textarea"
+                  name="textarea"
+                  rows="3"
+                  style={{
+                    width: "100%", // Make it responsive
+                    padding: "10px",
+                    borderRadius: "5px",
+                    border: "1px solid #22272C",
+                    background: "#050709",
+                    color: "white",
+                    marginTop: "20px",
+                  }}
+                  placeholder="Query/Message"
+                ></textarea>
+              </div>
+
               <div style={{ marginTop: "20px" }}>
                 <button className="navbar-button">Send Message</button>
               </div>
             </div>
           </div>
+
           <div>
-            <Image
-              src="/images/book.png"
+            <img
+              src="/images/ft1.png"
               alt="Description of the image"
-              width={500}
-              height={300}
+              style={{ height: "670px", width: "480px" }}
             />
           </div>
         </div>

@@ -1,10 +1,19 @@
 import React from "react";
 
-const BlogContent = () => {
+const BlogContent = ({ data }) => {
   return (
     <div className="main-container">
-      <div className="blog-content-main-section">
-        <div className="blog-content-main-section-content">
+      <div className="blog-content-main-section" style={{ color: "white" }}>
+        {data?.content && (
+          <>
+            <div
+              dangerouslySetInnerHTML={{ __html: data?.content }}
+              style={{ color: "white" }}
+              className="blog-content-main-section-content"
+            ></div>
+          </>
+        )}
+        {/* <div className="blog-content-main-section-content">
           <div className="blog-content-heading-box">
             <h4 className="blog-content-heading-text">
               Overview: Applications of Coaching
@@ -185,7 +194,7 @@ const BlogContent = () => {
               value as a vital resource for growth, achievement, and fulfilment.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

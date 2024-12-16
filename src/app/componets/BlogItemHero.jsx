@@ -1,23 +1,20 @@
 import React from "react";
 import Image from "next/image";
-const BlogItemHero = () => {
+import { baseurl } from "../helper/Helper";
+const BlogItemHero = ({ data }) => {
   return (
     <div className='className="main-container"'>
       <div className="blogItem-hero-container">
         <div className="blogItem-hero-content-section">
           <div className="blogitem-image-section">
-            <Image
-              src="/images/bg2.png"
+            <img
+              src={`${baseurl}${data?.image}`}
               alt="Description of the image"
-              width={250}
-              height={400}
+              style={{ width: "250px", height: "400px" }}
             />
           </div>
           <div className="blogItem-heding-box">
-            <h4 className="blogItem-conten-heading">
-              Where Coaching Works: A Guide to Personal and Professional
-              Development
-            </h4>
+            <h4 className="blogItem-conten-heading">{data?.title}</h4>
           </div>
         </div>
       </div>
