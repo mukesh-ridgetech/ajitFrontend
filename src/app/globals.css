@@ -751,66 +751,6 @@ body {
   }
 }
 
-/* blog section */
-.blog-crosel-box-item {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  transition: all 1s ease; /* Transition for all properties */
-}
-
-.blog-crosel-box-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: transparent;
-  transition: background-color 0.5s ease 0.2s; /* Add delay to color transition */
-  z-index: 1; /* Place this above the background image */
-  border-radius: 15px;
-}
-
-.blog-title {
-  width: 90%;
-  padding-left: 10px;
-  /* margin: auto; */
-}
-
-.blog-crosel-box-item .blog-title,
-.blog-crosel-box-item .marque-container,
-.blog-crosel-box-item .crosel-button {
-  position: relative;
-  z-index: 2; /* Ensure text and buttons stay above the background */
-  color: white;
-}
-
-.crosel-button:hover {
-  background: #8750f7;
-  transition: all 1s ease;
-}
-
-/* marque-container */
-
-.blog-crosel-box-item:hover {
-  background-color: transparent; /* Remove background color */
-  border-radius: 10px;
-}
-
-.blog-crosel-box-item:hover::before {
-  background-color: var(--dynamic-color);
-  /* Add the background color on hover */
-}
-
-.blog-crosel-box-item:hover {
-  transform: translateY(10px); /* Move the background image down */
-  border-radius: 10px !important;
-}
-
-.blog-crosel-box-item:hover .blog-title {
-  transform: translateY(-20px); /* Move the title up */
-}
 /* message secton */
 .message-main-conatainer {
   /* border: 1px solid red; */
@@ -877,6 +817,10 @@ body {
   margin: auto;
 }
 
+.t-heading {
+  width: 80%;
+  margin: auto;
+}
 .transfrom-couching-heading-section-text {
   width: 80%;
   margin: auto;
@@ -943,7 +887,7 @@ body {
   #transform-couching-tab-section-main-default
   .transfrom-arrow {
   transform: rotate(90deg);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .transform-couching-tab-section:hover
@@ -979,7 +923,7 @@ body {
 
 .transform-couching-tab-section-main:hover .transfrom-arrow {
   transform: rotate(-90deg);
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .transform-couching-tab-section-main:hover .transfrom-arrow path {
@@ -1093,7 +1037,7 @@ body {
 }
 
 .book-apointment-main-container-form-left {
-  width: 70%;
+  width: 50%;
 }
 
 .book-apointement-form {
@@ -1109,7 +1053,7 @@ body {
 }
 
 .fist-name input {
-  width: 48%;
+  width: 47%;
   border-radius: 8px;
   border: 1px solid #22272c;
   background: #050709;
@@ -1128,7 +1072,7 @@ body {
   margin-left: 20px;
 }
 .corporate-class input {
-  width: 100%;
+  width: 90%;
   border-radius: 8px;
   border: 1px solid #22272c;
   background: #050709;
@@ -1203,9 +1147,17 @@ body {
   height: 15px;
 }
 
-/* .radio-group1 .active {
+.radio-group1 .active {
   color: white;
-} */
+}
+
+.radio-group .active {
+  color: white;
+}
+
+.book-apointment-right-image {
+  margin-top: 1%;
+}
 
 @media (max-width: 768px) {
   .book-apointment-main-container {
@@ -1237,7 +1189,86 @@ body {
     flex-direction: column;
   }
 }
+
 /* blog section */
+/* .blog-crosel-box-item {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease;
+  border-radius: 15px;
+} */
+
+.blog-crosel-box-item {
+  position: relative;
+  overflow: hidden; /* Ensure any content outside the border-radius is clipped */
+  border-radius: 15px; /* Apply the border-radius */
+  transition: all 0.8s ease-in-out, transform 0.3s ease, background 0.3s ease;
+}
+
+.blog-crosel-box-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transition: background-color 0.5s ease 0.2s;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.blog-title {
+  width: 90%;
+  padding-left: 10px;
+  /* margin: auto; */
+}
+
+.blog-crosel-box-item .blog-title,
+.blog-crosel-box-item .marque-container,
+.blog-crosel-box-item .crosel-button {
+  position: relative;
+  z-index: 2; /* Ensure text and buttons stay above the background */
+  color: white;
+}
+
+.crosel-button:hover {
+  background: #8750f7;
+  transition: all 1s ease;
+}
+
+/* marque-container */
+
+/* .blog-crosel-box-item:hover {
+  background-color: transparent;
+  border-radius: 10px;
+} */
+
+.blog-crosel-box-item:hover {
+  /* transform: scale(1.05); */
+  border-radius: 15px; /* Keep border-radius intact during hover */
+  background: #007bff; /* Adjust background color */
+}
+
+.blog-crosel-box-item:hover::before {
+  background-color: var(--dynamic-color);
+  border-radius: 15px !important;
+  /* Add the background color on hover */
+}
+
+.blog-crosel-box-item:hover {
+  /* transform: translateY(10px);  */
+  border-radius: 10px !important;
+}
+
+.blog-crosel-box-item:hover .blog-title {
+  transform: translateY(-20px); /* Move the title up */
+}
+
+/* blog section */
+
 .blog-main-container {
   position: relative;
   margin-top: 40px;
@@ -1287,7 +1318,7 @@ body {
 
 .blog-crosel-box-item:hover {
   background: #007bff;
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   border-radius: 15px !important;
 }
 
@@ -1324,8 +1355,6 @@ body {
   transform: translateY(-20%); /* Start off-screen (right) */
   animation: btn-div 0.3s linear forwards; /* Animation for movement */
 }
-
-/* duplicate */
 
 .blog-title {
   color: #fff;
@@ -1793,6 +1822,7 @@ body {
 
 .ant-modal .ant-modal-content {
   background-color: black;
+  border: 1px solid #2a1454;
 }
 
 /* Close Button */
@@ -1934,7 +1964,7 @@ input[type="radio"] {
 }
 
 .ant-modal {
-  width: 900px !important;
+  width: 1000px !important;
   background-color: black !important;
   border: 1px solid blue !important;
   border-radius: 10px !important;
@@ -1966,7 +1996,7 @@ input[type="radio"] {
 
 .modal-content {
   background-color: black;
-  border: 2px solid blue;
+  border: 2px solid #2a1454;
   border-radius: 10px;
   color: white;
   padding: 20px;
@@ -2086,7 +2116,7 @@ input[type="radio"] {
 }
 
 .tankyou-conatainer-right {
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 
 .quize-image {
@@ -2163,24 +2193,10 @@ input[type="radio"] {
   z-index: 2; /* Ensure text and buttons stay above the background */
 }
 
-.blog-crosel-box-item1-box:hover {
-  background-color: transparent; /* Remove background color */
-}
-
 .blog-crosel-box-item1-box:hover::before {
   background-color: var(
     --dynamic-color
   ); /* Add the background color on hover */
-}
-
-.blog-crosel-box-item1-box:hover {
-  transform: translateY(10px); /* Move the background image down */
-}
-
-.blog-crosel-box-item1-box:hover {
-  background: #007bff;
-  transform: scale(1.05);
-  border-radius: 15px;
 }
 
 .blog-crosel-box-item1-box:hover .marquee-text {
@@ -2230,8 +2246,9 @@ input[type="radio"] {
     #8750f7 -38.01%,
     rgba(115, 67, 210, 0) 66.26%
   );
-
-  height: 70vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: auto;
 }
 
 .blogItem-hero-content-section {
@@ -2251,6 +2268,11 @@ input[type="radio"] {
   justify-content: flex-start;
   align-items: center;
   width: 90%;
+}
+
+.blogItem-image {
+  width: 300px;
+  height: 450px;
 }
 
 .blogItem-conten-heading {
@@ -2404,4 +2426,15 @@ input[type="radio"] {
 .crosel-button:hover {
   background: #8750f7 !important;
   transition: all 1s ease-out;
+}
+
+.crosel-button:hover .btn-image {
+  transform: rotate(45deg) !important;
+}
+.imagesdlkfjsldf {
+  position: relative;
+}
+
+.blog-crosel-box-item1-box:hover .blog-title {
+  transform: translateY(-30px) !important;
 }

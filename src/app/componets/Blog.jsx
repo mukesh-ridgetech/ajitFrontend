@@ -1,8 +1,10 @@
 "use client";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { baseurl } from "../helper/Helper";
+import axios from "axios";
 const Blog = () => {
   const data = [
     {
@@ -42,6 +44,29 @@ const Blog = () => {
     },
   ];
 
+  const [blogdata, setBlogData] = useState([]);
+  const fetchBlog = async () => {
+    try {
+      const response = await axios.get(baseurl + "/api/blog/getAllBlog");
+      console.log(response.data);
+
+      if (response.data) {
+        setBlogData(response.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlog();
+  }, []);
+
+  const router = useRouter();
+  const handleNavigate = (id) => {
+    router.push(`/blogItem/${id}`); // Navigate to the dynamic route with the id
+  };
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -79,13 +104,14 @@ const Blog = () => {
           {currentSlide === 0 ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
             >
               <path
-                d="M11.705 14.705C11.798 14.6121 11.8717 14.5018 11.9221 14.3804C11.9724 14.259 11.9983 14.1289 11.9983 13.9975C11.9983 13.8661 11.9724 13.736 11.9221 13.6146C11.8717 13.4932 11.798 13.3829 11.705 13.29L6.415 8L11.705 2.705C11.8926 2.51736 11.9981 2.26287 11.9981 1.9975C11.9981 1.73214 11.8926 1.47764 11.705 1.29C11.5174 1.10236 11.2629 0.996948 10.9975 0.996948C10.7321 0.996948 10.4776 1.10236 10.29 1.29L4.29 7.29C4.10375 7.47737 3.99921 7.73082 3.99921 7.995C3.99921 8.25919 4.10375 8.51264 4.29 8.7L10.29 14.7C10.3825 14.7933 10.4926 14.8675 10.6138 14.9182C10.735 14.969 10.8651 14.9953 10.9965 14.9958C11.1279 14.9963 11.2581 14.9708 11.3797 14.9209C11.5013 14.871 11.6118 14.7977 11.705 14.705Z"
-                fill="#2A2A33"
+                d="M17.5562 22.0582C17.6956 21.9189 17.8063 21.7534 17.8818 21.5713C17.9572 21.3892 17.9961 21.1941 17.9961 20.9969C17.9961 20.7998 17.9572 20.6046 17.8818 20.4225C17.8063 20.2404 17.6956 20.075 17.5562 19.9357L9.62116 12.0007L17.5562 4.05818C17.8376 3.77672 17.9957 3.39497 17.9957 2.99693C17.9957 2.59888 17.8376 2.21714 17.5562 1.93568C17.2747 1.65422 16.893 1.49609 16.4949 1.49609C16.0969 1.49609 15.7151 1.65422 15.4337 1.93568L6.43366 10.9357C6.15429 11.2167 5.99747 11.5969 5.99747 11.9932C5.99747 12.3895 6.15429 12.7696 6.43366 13.0507L15.4337 22.0507C15.5725 22.1906 15.7375 22.3019 15.9194 22.378C16.1012 22.4541 16.2962 22.4937 16.4934 22.4944C16.6905 22.4951 16.8858 22.4569 17.0682 22.382C17.2505 22.3072 17.4164 22.1972 17.5562 22.0582Z"
+                fill="#B8B8B8"
               />
             </svg>
           ) : (
@@ -154,24 +180,34 @@ const Blog = () => {
           customButtonGroup={<ButtonGroup />}
           renderButtonGroupOutside
         >
-          {data?.map((item, index) => {
+          {blogdata?.map((item, index) => {
             const colorIndex = index % colors.length;
             return (
               <div
                 key={item?.id}
                 style={{
-                  backgroundImage: `url(${item?.image})`,
+                  backgroundImage: `url(${baseurl}${item?.image})`,
                   "--dynamic-color": colors[colorIndex],
                 }}
-                className="blog-crosel-box-item bg-cover bg-center"
+                className="blog-crosel-box-item bg-cover bg-center rounded"
               >
-                <div className="blog-title">{item?.title}</div>
-
-                <div className="marque-container">
-                  <div className="marquee-text">{item?.content}</div>
+                <div className="blog-title" style={{ marginLeft: "7px" }}>
+                  {item?.title}
                 </div>
 
-                <button className="crosel-button">
+                <div className="marque-container">
+                  <div className="marquee-text">
+                    {" "}
+                    {item?.metaTags[0]?.content}
+                  </div>
+                </div>
+
+                <button
+                  className="crosel-button"
+                  onClick={() => {
+                    handleNavigate(`${item?._id}`);
+                  }}
+                >
                   Explore
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

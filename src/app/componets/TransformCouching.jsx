@@ -5,7 +5,7 @@ const TransformCouching = () => {
     <div className="main-container">
       <div className="transform-couching-main-container">
         <div className="transfrom-couching-heading-section">
-          <div>
+          <div className="t-heading">
             <h1 className="sub-heading">
               Transformative Coaching for Growth and Success
             </h1>

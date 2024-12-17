@@ -78,20 +78,20 @@ const BlogItem = () => {
             const colorIndex = index % colors.length;
             return (
               <div
-                key={item?._id}
+                key={item?.id}
                 style={{
                   backgroundImage: `url(${baseurl}${item?.image})`,
                   "--dynamic-color": colors[colorIndex],
                 }}
-                className=" blog-crosel-box-item1-box bg-cover bg-center"
+                className="blog-crosel-box-item bg-cover bg-center rounded"
               >
-                <div className="blog-title">{item?.title}</div>
+                <div className="blog-title" style={{ marginLeft: "7px" }}>
+                  {item?.title}
+                </div>
 
-                <div
-                  className="marque-container"
-                  style={{ paddingLeft: "20px" }}
-                >
+                <div className="marque-container">
                   <div className="marquee-text">
+                    {" "}
                     {item?.metaTags[0]?.content}
                   </div>
                 </div>
@@ -101,7 +101,6 @@ const BlogItem = () => {
                   onClick={() => {
                     handleNavigate(`${item?._id}`);
                   }}
-                  style={{ color: "white" }}
                 >
                   Explore
                   <svg

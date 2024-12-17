@@ -10,7 +10,7 @@ const BlogItemHero = ({ data }) => {
             <img
               src={`${baseurl}${data?.image}`}
               alt="Description of the image"
-              style={{ width: "250px", height: "400px", marginTop: "5%" }}
+              className="blogItem-image"
             />
           </div>
           <div className="blogItem-heding-box">

@@ -158,7 +158,7 @@ const BlogHero = () => {
   };
 
   return (
-    <div className="main-container">
+    <div>
       <div className="hero-main-section1">
         <div className="crosel-item1">
           <div className="hero-item-container">

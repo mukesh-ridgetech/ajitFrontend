@@ -27,7 +27,7 @@ const BookDiscovery = () => {
         <div className="book-apointment-main-container-form">
           <div className="book-apointment-main-container-form-left">
             <h2 className="sub-heading">Book Your Discovery Call</h2>
-            <h4 className="main-para">
+            <h4 className="main-para" style={{ marginBottom: "13px" }}>
               Elevate your journey. Discover how personalized coaching can
               unlock your full potential. Fill in the information below to get
               started.
@@ -46,7 +46,9 @@ const BookDiscovery = () => {
                 <div className="radio-group1">
                   <div>
                     <label
-                      className={`radio-option ${selectedType ? "active" : ""}`}
+                      className={`radio-option ${
+                        selectedType === "individual" ? "active" : ""
+                      }`}
                     >
                       <input
                         type="radio"
@@ -58,7 +60,9 @@ const BookDiscovery = () => {
                       Individual
                     </label>
                     <label
-                      className={`radio-option ${selectedType ? "active" : ""}`}
+                      className={`radio-option ${
+                        selectedType === "corporate" ? "active" : ""
+                      }`}
                     >
                       <input
                         type="radio"
@@ -90,7 +94,11 @@ const BookDiscovery = () => {
                   Select a Coaching Program
                 </h3>
                 <div className="radio-group">
-                  <label className="radio-option">
+                  <label
+                    className={`radio-option ${
+                      selectedProgram === "executive" ? "active" : ""
+                    }`}
+                  >
                     <input
                       type="radio"
                       name="coachingProgram"
@@ -100,7 +108,11 @@ const BookDiscovery = () => {
                     />
                     One-on-One Executive Coaching
                   </label>
-                  <label className="radio-option">
+                  <label
+                    className={`radio-option ${
+                      selectedProgram === "personal" ? "active" : ""
+                    }`}
+                  >
                     <input
                       type="radio"
                       name="coachingProgram"
@@ -110,7 +122,11 @@ const BookDiscovery = () => {
                     />
                     One-on-One Coaching (Personal/Professional Growth)
                   </label>
-                  <label className="radio-option">
+                  <label
+                    className={`radio-option ${
+                      selectedProgram === "business" ? "active" : ""
+                    }`}
+                  >
                     <input
                       type="radio"
                       name="coachingProgram"
@@ -147,7 +163,7 @@ const BookDiscovery = () => {
             </div>
           </div>
 
-          <div>
+          <div className="book-apointment-right-image">
             <img
               src="/images/ft1.png"
               alt="Description of the image"
