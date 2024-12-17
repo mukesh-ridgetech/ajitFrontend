@@ -25,7 +25,7 @@ body {
 
 .sub-heading {
   margin-bottom: 20px;
-  font-size: 45px;
+  font-size: 35px;
   font-style: normal;
   font-weight: 700;
   line-height: 54px;
@@ -697,9 +697,9 @@ body {
 }
 
 .coaching-left-box {
-  width: 50%;
-  padding-left: 81px;
-  padding-right: 81px;
+  width: 55%;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 90px;
   padding-top: 31px;
 }
@@ -769,6 +769,13 @@ body {
   background-color: transparent;
   transition: background-color 0.5s ease 0.2s; /* Add delay to color transition */
   z-index: 1; /* Place this above the background image */
+  border-radius: 15px;
+}
+
+.blog-title {
+  width: 90%;
+  padding-left: 10px;
+  /* margin: auto; */
 }
 
 .blog-crosel-box-item .blog-title,
@@ -777,6 +784,11 @@ body {
   position: relative;
   z-index: 2; /* Ensure text and buttons stay above the background */
   color: white;
+}
+
+.crosel-button:hover {
+  background: #8750f7;
+  transition: all 1s ease;
 }
 
 /* marque-container */
@@ -801,6 +813,8 @@ body {
 }
 /* message secton */
 .message-main-conatainer {
+  /* border: 1px solid red; */
+  width: 100%;
   display: flex;
   justify-content: center;
   padding-left: 76px;
@@ -808,6 +822,7 @@ body {
   /* border: 1px solid red; */
 }
 .maessage-content {
+  /* border: 1px solid pink; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -819,6 +834,9 @@ body {
 }
 
 .message-content-right {
+  display: flex;
+  flex-direction: row-reverse;
+  /* border: 1px solid blue; */
   width: 40%;
 }
 
@@ -875,6 +893,7 @@ body {
 }
 
 .transform-couching-tab-section {
+  transition: all 5s ease;
   margin-top: 32px;
   display: flex;
   flex-direction: column;
@@ -889,11 +908,13 @@ body {
   /* border: 1px solid rebeccapurple; */
   border-bottom: 1px solid #2a1454;
   gap: 43px;
+  transition: all 5s ease;
   /* justify-content: space-between; */
   /* background-color: red; */
 }
 
 #transform-couching-tab-section-main-default {
+  transition: all 5s ease;
   display: flex;
   padding-left: 30px;
   padding-right: 30px;
@@ -922,6 +943,7 @@ body {
   #transform-couching-tab-section-main-default
   .transfrom-arrow {
   transform: rotate(90deg);
+  transition: all 1s ease;
 }
 
 .transform-couching-tab-section:hover
@@ -957,6 +979,7 @@ body {
 
 .transform-couching-tab-section-main:hover .transfrom-arrow {
   transform: rotate(-90deg);
+  transition: all 1s ease;
 }
 
 .transform-couching-tab-section-main:hover .transfrom-arrow path {
@@ -975,6 +998,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  transition: all 2s ease;
   /* border: 1px solid green; */
   /* border: 1px solid red; */
 }
@@ -1093,7 +1117,7 @@ body {
   padding: 15px 21px;
   flex-direction: column;
   align-items: flex-start;
-  color: #757575;
+  color: white;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1178,6 +1202,10 @@ body {
   width: 15px;
   height: 15px;
 }
+
+/* .radio-group1 .active {
+  color: white;
+} */
 
 @media (max-width: 768px) {
   .book-apointment-main-container {
@@ -1870,7 +1898,7 @@ input[type="radio"] {
 .circle {
   width: 80px;
   height: 80px;
-  background: #fff;
+  background: black;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1887,7 +1915,7 @@ input[type="radio"] {
 }
 
 .circle:hover {
-  border-color: #9254de;
+  /* border-color: #9254de; */
   transform: scale(1.2);
 }
 
@@ -2357,10 +2385,23 @@ input[type="radio"] {
 }
 
 .carousel-button-group button.right {
-  right: 20px; /* Align the right button to the right */
+  right: 8px; /* Align the right button to the right */
 }
 
 .custom-gradient {
   border-radius: 10px;
   background: linear-gradient(263deg, #2a1454 -14.63%, #8750f7 99.1%);
+}
+
+.react-multi-carousel-track {
+  gap: 15px !important;
+}
+
+/* .react-multi-carousel-item {
+  width: 370px !important;
+} */
+
+.crosel-button:hover {
+  background: #8750f7 !important;
+  transition: all 1s ease-out;
 }

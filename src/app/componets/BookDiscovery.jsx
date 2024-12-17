@@ -45,7 +45,9 @@ const BookDiscovery = () => {
                 <h3 className="select-option-label">Select a Coaching Type</h3>
                 <div className="radio-group1">
                   <div>
-                    <label className="radio-option">
+                    <label
+                      className={`radio-option ${selectedType ? "active" : ""}`}
+                    >
                       <input
                         type="radio"
                         name="coachingType"
@@ -55,7 +57,9 @@ const BookDiscovery = () => {
                       />
                       Individual
                     </label>
-                    <label className="radio-option">
+                    <label
+                      className={`radio-option ${selectedType ? "active" : ""}`}
+                    >
                       <input
                         type="radio"
                         name="coachingType"
@@ -147,7 +151,7 @@ const BookDiscovery = () => {
             <img
               src="/images/ft1.png"
               alt="Description of the image"
-              style={{ height: "670px", width: "480px" }}
+              style={{ height: "670px", width: "auto" }}
             />
           </div>
         </div>

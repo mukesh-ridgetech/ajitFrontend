@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Message = () => {
   return (
-    <div className="main-container">
+    <div>
       <div className="message-main-conatainer">
         <div className="maessage-content">
           <div className="message-content-left">

@@ -87,7 +87,10 @@ const BlogItem = () => {
               >
                 <div className="blog-title">{item?.title}</div>
 
-                <div className="marque-container">
+                <div
+                  className="marque-container"
+                  style={{ paddingLeft: "20px" }}
+                >
                   <div className="marquee-text">
                     {item?.metaTags[0]?.content}
                   </div>
@@ -98,6 +101,7 @@ const BlogItem = () => {
                   onClick={() => {
                     handleNavigate(`${item?._id}`);
                   }}
+                  style={{ color: "white" }}
                 >
                   Explore
                   <svg

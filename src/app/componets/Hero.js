@@ -19,10 +19,10 @@ const Hero = () => {
   //   setIsOpen(false);
   // };
   const [currentImage, setCurrentImage] = useState("/images/f1.png"); // Default image
-  const [currentImage1, setCurrentImage1] = useState("/images/f2.png");
+  const [currentImage1, setCurrentImage1] = useState("/images/c3.png");
 
   const handleMouseEnter = () => {
-    setCurrentImage("/images/h4.png"); // Hover image
+    setCurrentImage("/images/v2.png"); // Hover image
   };
 
   const handleMouseLeave = () => {
@@ -34,7 +34,7 @@ const Hero = () => {
   };
 
   const handleMouseLeave1 = () => {
-    setCurrentImage1("/images/f2.png"); // Default image
+    setCurrentImage1("/images/c3.png"); // Default image
   };
 
   const questions = [
@@ -290,7 +290,7 @@ const Hero = () => {
           showDots={true}
           responsive={responsive}
           ssr={true} // means to render carousel on server-side.
-          infinite={true}
+          // infinite={true}
           autoPlay={true}
           autoPlaySpeed={1000}
           keyBoardControl={true}
