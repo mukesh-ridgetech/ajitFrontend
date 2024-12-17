@@ -1457,8 +1457,8 @@ body {
 
 @media (max-width: 768px) {
   .blog-main-container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .blog-crosel-box-item {
@@ -2587,7 +2587,7 @@ input[type="radio"] {
 }
 
 .carousel-button-group button.left {
-  left: 25px;
+  left: 15px;
   /* Align the left button to the left */
 }
 
