@@ -179,6 +179,7 @@ const Blog = () => {
           transitionDuration={1000}
           customButtonGroup={<ButtonGroup />}
           renderButtonGroupOutside
+          className="carousel-container"
         >
           {blogdata?.map((item, index) => {
             const colorIndex = index % colors.length;

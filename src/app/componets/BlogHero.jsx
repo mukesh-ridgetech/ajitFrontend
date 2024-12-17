@@ -238,7 +238,7 @@ const BlogHero = () => {
             </div>
 
             {/* <img src="/images/h1.png" alt="" className="image-class" /> */}
-            <Image
+            <img
               src="/images/m5.png"
               alt="Description of the image"
               width={700}
