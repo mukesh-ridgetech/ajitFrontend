@@ -290,7 +290,7 @@ const Hero = () => {
           showDots={true}
           responsive={responsive}
           ssr={true} // means to render carousel on server-side.
-          // infinite={true}
+          infinite={true}
           autoPlay={true}
           autoPlaySpeed={1000}
           keyBoardControl={true}
@@ -879,8 +879,8 @@ const Hero = () => {
           <div className="tankyou-conatainer">
             <div className="tankyou-conatainer-left">
               <div>
-                <h1 className="sub-heading1">Thank You For Taking Quiz</h1>
-                <p className="para1">
+                <h1 className="tankyou-heading">Thank You For Taking Quiz</h1>
+                <p className="thank-para">
                   Your responses reflect a strong commitment to fostering
                   meaningful change within your organization’s leadership.
                   Executive Coaching and Stakeholder-Centered Coaching are
@@ -962,8 +962,8 @@ const Hero = () => {
           <div className="tankyou-conatainer">
             <div className="tankyou-conatainer-left">
               <div>
-                <h1 className="sub-heading1">Thank You For Taking Quiz</h1>
-                <p className="para1">
+                <h1 className="tankyou-heading">Thank You For Taking Quiz</h1>
+                <p className="thank-para">
                   Your responses reflect a strong commitment to fostering
                   meaningful change within your organization’s leadership.
                   Executive Coaching and Stakeholder-Centered Coaching are
@@ -1045,6 +1045,7 @@ const Hero = () => {
                       alt="Hover to change"
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
+                      // style={{ width: "120px", height: "120px" }}
                     />
                   </div>
                   <p className="label-purple">Individual</p>

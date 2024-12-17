@@ -77,7 +77,8 @@ body {
   font-style: normal;
   text-align: justify;
   font-weight: 400;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
+  /* 120% */
 }
 
 .semi-title {
@@ -85,7 +86,8 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 36px; /* 180% */
+  line-height: 36px;
+  /* 180% */
   letter-spacing: 0.5px;
 }
 
@@ -100,11 +102,12 @@ body {
 
 .para1 {
   color: #ddd;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   text-align: justify;
+  margin-bottom: 10px;
   /* 150% */
 }
 
@@ -113,7 +116,8 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 30px; /* 150% */
+  line-height: 30px;
+  /* 150% */
   text-transform: capitalize;
 }
 
@@ -158,7 +162,8 @@ body {
     font-style: normal;
     text-align: justify;
     font-weight: 400;
-    line-height: 24px; /* 120% */
+    line-height: 24px;
+    /* 120% */
   }
 
   .semi-title {
@@ -166,7 +171,8 @@ body {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 36px; /* 180% */
+    line-height: 36px;
+    /* 180% */
     letter-spacing: 0.5px;
   }
 
@@ -184,7 +190,8 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 36px; /* 150% */
+    line-height: 36px;
+    /* 150% */
     text-transform: capitalize;
   }
 }
@@ -274,6 +281,7 @@ body {
   color: #8e5af8;
   border-bottom: 1px solid #8e5af8;
 }
+
 .react-multi-carousel-dot button {
   margin-right: 0px !important;
 }
@@ -282,6 +290,7 @@ body {
   display: flex !important;
   gap: 6px !important;
 }
+
 /* .react-multi-carousel-dot button {
   display: flex !important;
   gap: 6px;
@@ -431,7 +440,7 @@ body {
     #8750f7 -37.96%,
     rgba(115, 67, 210, 0) 97.52%
   );
-  height: 100vh;
+  height: auto;
   /* filter: blur(75px); */
 }
 
@@ -439,6 +448,7 @@ body {
   width: 100%;
   height: auto;
 }
+
 .react-multiple-carousel__arrow {
   display: none;
 }
@@ -453,6 +463,7 @@ body {
 .imagesdlkfjsldf {
   /* border: 1px solid pink; */
 }
+
 .item-main {
   width: 60%;
   padding-top: 20%;
@@ -463,7 +474,8 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 30px; /* 166.667% */
+  line-height: 30px;
+  /* 166.667% */
   background: linear-gradient(90deg, #8750f7 0%, #fff 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -471,19 +483,45 @@ body {
 }
 
 .item-main1 {
+  width: 50%;
   padding-top: 5%;
+}
+
+.item-blog-heading {
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 78px; /* 150% */
+  background: linear-gradient(90deg, #fff 0%, #8750f7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.item-blog-para {
+  color: #ddd;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
 }
 
 .hero-button-group {
   display: flex;
   gap: 20px;
-  padding-top: 13%;
+  padding-top: 7%;
 }
 
 .hero-button-group1 {
   display: flex;
   gap: 20px;
-  padding-top: 40%;
+  padding-top: 20%;
+}
+
+.item-blog-image-section {
+  display: flex;
+  margin-top: 5%;
+  flex-direction: column-reverse;
 }
 
 .hero-button1 {
@@ -521,9 +559,11 @@ body {
   line-height: 15px;
   text-transform: capitalize;
   /* Default border */
-  overflow: hidden; /* Ensures the red background stays within the border radius */
+  overflow: hidden;
+  /* Ensures the red background stays within the border radius */
   cursor: pointer;
-  transition: color 0.3s ease; /* Smooth text color transition */
+  transition: color 0.3s ease;
+  /* Smooth text color transition */
 }
 
 .hero-button2::before {
@@ -553,43 +593,47 @@ body {
 }
 
 .hero-button2:hover .hero-h1-class {
-  color: white; /* Change text color on hover */
+  color: white;
+  /* Change text color on hover */
 }
 
 .hero-button2:hover::before {
-  left: 0; /* Slide the red background from left to right */
+  left: 0;
+  /* Slide the red background from left to right */
 }
 
 .hero-button2 :hover .linkedin-icon svg path {
   margin-left: 10px;
-  transition: transform 0.3s ease; /* Smooth transition for icon */
+  transition: transform 0.3s ease;
+  /* Smooth transition for icon */
   fill: white;
 }
+
 .hero-button2 :hover {
   border: none;
 }
 
 .hero-button2:hover {
-  background: linear-gradient(
-    to right,
-    #007bff 50%,
-    white 50%
-  ); /* Background moves from left to right */
-  color: white; /* Text color changes to white */
+  background: linear-gradient(to right, #007bff 50%, white 50%);
+  /* Background moves from left to right */
+  color: white;
+  /* Text color changes to white */
 }
 
 .hero-button2 svg path {
-  transition: fill 0.3s ease; /* Smooth transition for icon color */
+  transition: fill 0.3s ease;
+  /* Smooth transition for icon color */
 }
 
 .hero-button2:hover svg path {
-  fill: white; /* Change icon color to white on hover */
+  fill: white;
+  /* Change icon color to white on hover */
 }
 
 .image-class {
-  height: 90vh;
+  /* height: 90vh;
   margin-top: 10vh;
-  z-index: 20;
+  z-index: 20; */
 }
 
 .quiz-rotate {
@@ -719,9 +763,11 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
   .couching-main-section {
     flex-direction: column;
   }
+
   .coaching-left-box {
     width: 100%;
     padding-left: 0;
@@ -745,6 +791,7 @@ body {
   /* padding-top: 57px; */
   /* border: 1px solid red; */
 }
+
 .maessage-content {
   /* border: 1px solid pink; */
   width: 100%;
@@ -799,11 +846,16 @@ body {
 .transfrom-couching-heading-section {
   width: 90%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .t-heading {
-  width: 80%;
+  width: 85%;
   margin: auto;
+  text-align: center;
 }
 
 .transfrom-couching-heading-section {
@@ -811,10 +863,10 @@ body {
   margin: auto;
 }
 
-/* .transfrom-couching-heading-section-text {
-  width: 80%;
+.transfrom-couching-heading-section-text {
+  width: 75%;
   margin: auto;
-} */
+}
 
 .transfrom-couching-heading-section-text-heading {
   color: #ddd;
@@ -823,7 +875,8 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
+  /* 120% */
 }
 
 .transform-couching-tab-section {
@@ -870,7 +923,8 @@ body {
 .transform-couching-tab-section:hover
   #transform-couching-tab-section-main-default {
   background: transparent;
-  border-radius: 0; /* Use a valid value */
+  border-radius: 0;
+  /* Use a valid value */
 }
 
 .transform-couching-tab-section:hover
@@ -956,6 +1010,7 @@ body {
   #transform-couching-tab-section-main-default {
     flex-direction: column;
   }
+
   .transform-couching-tab-section-main-left {
     width: 100%;
   }
@@ -1061,6 +1116,7 @@ body {
 .corporate-class {
   margin-left: 20px;
 }
+
 .corporate-class input {
   width: 90%;
   border-radius: 8px;
@@ -1094,7 +1150,8 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 30px; /* 187.5% */
+  line-height: 30px;
+  /* 187.5% */
 }
 
 .container-select {
@@ -1192,8 +1249,10 @@ body {
 
 .blog-crosel-box-item {
   position: relative;
-  overflow: hidden; /* Ensure any content outside the border-radius is clipped */
-  border-radius: 15px; /* Apply the border-radius */
+  overflow: hidden;
+  /* Ensure any content outside the border-radius is clipped */
+  border-radius: 15px;
+  /* Apply the border-radius */
   transition: all 0.8s ease-in-out, transform 0.3s ease, background 0.3s ease;
 }
 
@@ -1220,7 +1279,8 @@ body {
 .blog-crosel-box-item .marque-container,
 .blog-crosel-box-item .crosel-button {
   position: relative;
-  z-index: 2; /* Ensure text and buttons stay above the background */
+  z-index: 2;
+  /* Ensure text and buttons stay above the background */
   color: white;
 }
 
@@ -1238,8 +1298,10 @@ body {
 
 .blog-crosel-box-item:hover {
   /* transform: scale(1.05); */
-  border-radius: 15px; /* Keep border-radius intact during hover */
-  background: #007bff; /* Adjust background color */
+  border-radius: 15px;
+  /* Keep border-radius intact during hover */
+  background: #007bff;
+  /* Adjust background color */
 }
 
 .blog-crosel-box-item:hover::before {
@@ -1254,7 +1316,8 @@ body {
 }
 
 .blog-crosel-box-item:hover .blog-title {
-  transform: translateY(-20px); /* Move the title up */
+  transform: translateY(-20px);
+  /* Move the title up */
 }
 
 /* blog section */
@@ -1268,6 +1331,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  /* border: 1px solid red; */
+}
+
+.carousel-container {
+  /* border: 1px solid red; */
+  padding: 20px;
 }
 
 .blog-crosel-box-item {
@@ -1287,6 +1356,10 @@ body {
   border-radius: 15px;
   /* background: #000; */
   /* background: url("/images/bg1.png") lightgray -16.117px 0px / 108.759% 100% no-repeat; */
+}
+
+.blog-crosel-box-item:hover {
+  transform: scale(1.05);
 }
 
 .crosel-button {
@@ -1317,13 +1390,16 @@ body {
   width: 300px;
   height: 80px;
   color: black;
-  display: flex; /* Make it visible and center the text */
+  display: flex;
+  /* Make it visible and center the text */
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   font-size: 18px;
-  transform: translateX(50%); /* Start off-screen (right) */
-  animation: move-div 0.3s linear forwards; /* Animation for movement */
+  transform: translateX(50%);
+  /* Start off-screen (right) */
+  animation: move-div 0.3s linear forwards;
+  /* Animation for movement */
   padding-left: 20px;
 }
 
@@ -1343,8 +1419,10 @@ body {
   gap: 10px;
   border-radius: 8px;
   background: linear-gradient(90deg, #8750f7 0%, #2a1454 51%, #8750f7 100%);
-  transform: translateY(-20%); /* Start off-screen (right) */
-  animation: btn-div 0.3s linear forwards; /* Animation for movement */
+  transform: translateY(-20%);
+  /* Start off-screen (right) */
+  animation: btn-div 0.3s linear forwards;
+  /* Animation for movement */
 }
 
 .blog-title {
@@ -1352,7 +1430,8 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 32px; /* 133.333% */
+  line-height: 32px;
+  /* 133.333% */
   letter-spacing: -0.533px;
 }
 
@@ -1360,6 +1439,7 @@ body {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0%);
   }
@@ -1369,6 +1449,7 @@ body {
   from {
     transform: translateY(100%);
   }
+
   to {
     transform: translateY(30%);
   }
@@ -1405,10 +1486,14 @@ body {
 
 .circular-image {
   margin: auto;
-  width: 200px; /* Set the width */
-  height: 200px; /* Set the height */
-  border-radius: 50%; /* Makes it a perfect circle */
-  object-fit: cover; /* Ensures the image scales properly within the container */
+  width: 200px;
+  /* Set the width */
+  height: 200px;
+  /* Set the height */
+  border-radius: 50%;
+  /* Makes it a perfect circle */
+  object-fit: cover;
+  /* Ensures the image scales properly within the container */
   /* Optional: Adds a red border */
 }
 
@@ -1434,7 +1519,8 @@ body {
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 38px; /* 237.5% */
+  line-height: 38px;
+  /* 237.5% */
 }
 
 .testinomial-heading {
@@ -1474,7 +1560,8 @@ body {
   font-size: 45px;
   font-style: normal;
   font-weight: 700;
-  line-height: 54px; /* 120% */
+  line-height: 54px;
+  /* 120% */
   background: linear-gradient(90deg, #8750f7 0%, #fff 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -1507,7 +1594,8 @@ body {
   font-size: 45px;
   font-style: normal;
   font-weight: 700;
-  line-height: 54px; /* 120% */
+  line-height: 54px;
+  /* 120% */
   margin-bottom: 10px;
   background: linear-gradient(90deg, #8750f7 0%, #fff 100%);
   background-clip: text;
@@ -1521,7 +1609,8 @@ body {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 36px; /* 180% */
+  line-height: 36px;
+  /* 180% */
   letter-spacing: 0.5px;
   margin-bottom: 20px;
 }
@@ -1558,7 +1647,8 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 27px; /* 112.5% */
+  line-height: 27px;
+  /* 112.5% */
   letter-spacing: 0.5px;
   margin-top: 15px;
 }
@@ -1582,7 +1672,8 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 27px; /* 150% */
+  line-height: 27px;
+  /* 150% */
   letter-spacing: 0.5px;
 }
 
@@ -1594,7 +1685,8 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 27px; /* 150% */
+  line-height: 27px;
+  /* 150% */
   letter-spacing: 0.5px;
 }
 
@@ -1613,7 +1705,8 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  line-height: 27px; /* 150% */
+  line-height: 27px;
+  /* 150% */
   letter-spacing: 0.5px;
 }
 
@@ -1659,7 +1752,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 8px solid #e0e0e0; /* Light grey background */
+  border: 8px solid #e0e0e0;
+  /* Light grey background */
   transition: background 0.3s ease;
 }
 
@@ -1674,6 +1768,7 @@ body {
   0% {
     background: conic-gradient(#f1c40f 0% 0%, #e0e0e0 0% 100%);
   }
+
   100% {
     background: conic-gradient(#f1c40f 0% 70%, #e0e0e0 70% 100%);
   }
@@ -1705,6 +1800,10 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  display: inline-flex;
+  padding: 65px 104.999px 51px 106.001px;
+  justify-content: center;
+  align-items: center;
 }
 
 .close-btn {
@@ -1742,22 +1841,27 @@ body {
   justify-content: center;
   margin-bottom: 10px;
   border: 2px solid transparent;
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition for hover effects */
 }
 
 .circle img {
   width: 50px;
   height: 50px;
-  transition: transform 0.3s ease-in-out; /* Smooth scaling for the image */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth scaling for the image */
 }
 
 .circle:hover {
-  border-color: #9254de; /* Change border color on hover */
-  transform: scale(1.2); /* Increase size of the circle */
+  border-color: #9254de;
+  /* Change border color on hover */
+  transform: scale(1.2);
+  /* Increase size of the circle */
 }
 
 .circle:hover img {
-  transform: scale(1.1); /* Slightly increase image size */
+  transform: scale(1.1);
+  /* Slightly increase image size */
 }
 
 .label {
@@ -1810,6 +1914,10 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  display: inline-flex;
+  padding: 65px 104.999px 51px 106.001px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Modal Container */
@@ -1824,7 +1932,7 @@ body {
 
 .ant-modal .ant-modal-content {
   background-color: black;
-  border: 1px solid #2a1454;
+  /* border: 1px solid #2a1454; */
 }
 
 /* Close Button */
@@ -1928,8 +2036,8 @@ input[type="radio"] {
 }
 
 .circle {
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   background: black;
   border-radius: 50%;
   display: flex;
@@ -1941,8 +2049,8 @@ input[type="radio"] {
 }
 
 .circle img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -1952,7 +2060,7 @@ input[type="radio"] {
 }
 
 .circle:hover img {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .label {
@@ -1966,9 +2074,9 @@ input[type="radio"] {
 }
 
 .ant-modal {
-  width: 1000px !important;
+  width: 1250px !important;
   background-color: black !important;
-  border: 1px solid blue !important;
+  border: 1px solid #2a1454 !important;
   border-radius: 10px !important;
 }
 
@@ -2003,8 +2111,8 @@ input[type="radio"] {
   color: white;
   padding: 20px;
   text-align: center;
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 250px;
 
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
 }
@@ -2016,11 +2124,12 @@ input[type="radio"] {
   right: 10px;
   color: blue;
 }
+
 /* quize css */
 /* Quiz Application Styles */
 
 .quiz-container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   padding: 10px;
   background-color: transparent;
@@ -2052,11 +2161,16 @@ input[type="radio"] {
   /* align-items: cente; */
   text-align: left;
   font-size: 16px;
-  padding: 10px;
+  padding: 15px;
   background-color: #2a2a2a;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  color: #f2f2f2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
 }
 
 .option-label:hover {
@@ -2102,10 +2216,11 @@ input[type="radio"] {
 .tankyou-conatainer {
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .tankyou-conatainer-left {
-  width: 60%;
+  width: 50%;
 }
 
 #span {
@@ -2113,7 +2228,8 @@ input[type="radio"] {
   font-size: 20px;
   text-align: justify;
   font-weight: 500;
-  line-height: 25px; /* 150% */
+  line-height: 25px;
+  /* 150% */
   text-transform: capitalize;
 }
 
@@ -2121,10 +2237,41 @@ input[type="radio"] {
   /* margin-top: 10%; */
 }
 
+.tankyou-heading {
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px; /* 120% */
+  background: linear-gradient(90deg, #8750f7 0%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 14px;
+}
+
+.thank-para {
+  color: #f2f2f2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  margin-bottom: 60px;
+}
+
+.option-label input[type="radio"] {
+  width: 24px;
+  accent-color: #f2f2f2;
+}
+
 .quize-image {
   width: 400px;
 }
 
+.quize-ul-tag ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 50px;
+}
 .quize-ul-tag ul li::marker {
   color: white !important;
 }
@@ -2141,11 +2288,10 @@ input[type="radio"] {
 
 .section-container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Dynamic columns */
-  gap: 20px; /* Adds spacing between items */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Dynamic columns */
+  gap: 20px;
+  /* Adds spacing between items */
 }
 
 @media (max-width: 768px) {
@@ -2184,7 +2330,8 @@ input[type="radio"] {
   position: relative;
   background-size: cover;
   background-position: center;
-  transition: all 1s ease; /* Transition for all properties */
+  transition: all 1s ease;
+  /* Transition for all properties */
 }
 
 .blog-crosel-box-item1-box::before {
@@ -2195,21 +2342,23 @@ input[type="radio"] {
   right: 0;
   bottom: 0;
   background-color: transparent;
-  transition: background-color 0.5s ease 0.2s; /* Add delay to color transition */
-  z-index: 1; /* Place this above the background image */
+  transition: background-color 0.5s ease 0.2s;
+  /* Add delay to color transition */
+  z-index: 1;
+  /* Place this above the background image */
 }
 
 .blog-crosel-box-item1-box .blog-title,
 .blog-crosel-box-item1-box .marque-container,
 .blog-crosel-box-item1-box .crosel-button {
   position: relative;
-  z-index: 2; /* Ensure text and buttons stay above the background */
+  z-index: 2;
+  /* Ensure text and buttons stay above the background */
 }
 
 .blog-crosel-box-item1-box:hover::before {
-  background-color: var(
-    --dynamic-color
-  ); /* Add the background color on hover */
+  background-color: var(--dynamic-color);
+  /* Add the background color on hover */
 }
 
 .blog-crosel-box-item1-box:hover .marquee-text {
@@ -2217,14 +2366,18 @@ input[type="radio"] {
   width: 300px;
   height: 80px;
   color: black;
-  display: flex; /* Make it visible and center the text */
+  display: flex;
+  /* Make it visible and center the text */
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   font-size: 1.2rem;
-  transform: translateX(50%); /* Start off-screen (right) */
-  animation: move-div 0.3s linear forwards; /* Animation for movement */
+  transform: translateX(50%);
+  /* Start off-screen (right) */
+  animation: move-div 0.3s linear forwards;
+  /* Animation for movement */
 }
+
 .blog-crosel-box-item1-box:hover .blog-title {
   color: black;
   margin-bottom: 10px;
@@ -2241,8 +2394,10 @@ input[type="radio"] {
   gap: 10px;
   border-radius: 8px;
   background: linear-gradient(90deg, #8750f7 0%, #2a1454 51%, #8750f7 100%);
-  transform: translateY(-20%); /* Start off-screen (right) */
-  animation: btn-div 0.3s linear forwards; /* Animation for movement */
+  transform: translateY(-20%);
+  /* Start off-screen (right) */
+  animation: btn-div 0.3s linear forwards;
+  /* Animation for movement */
 }
 
 .section-item {
@@ -2294,7 +2449,8 @@ input[type="radio"] {
   font-size: 48px;
   font-style: normal;
   font-weight: 500;
-  line-height: 55px; /* 114.583% */
+  line-height: 55px;
+  /* 114.583% */
 }
 
 @media (max-width: 768px) {
@@ -2324,6 +2480,7 @@ input[type="radio"] {
   border-radius: 15px;
   background: #b7b7b7;
 }
+
 .blog-content-heading-box {
   width: 100%;
 }
@@ -2338,7 +2495,8 @@ input[type="radio"] {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 36px; /* 180% */
+  line-height: 36px;
+  /* 180% */
 }
 
 .blog-content-para-text {
@@ -2346,7 +2504,8 @@ input[type="radio"] {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px;
+  /* 171.429% */
 }
 
 /* custom button */
@@ -2399,11 +2558,15 @@ input[type="radio"] {
 .carousel-button-group {
   position: absolute;
   top: 50%;
-  width: 100%; /* Ensure the group spans the full width of the carousel */
-  transform: translateY(-50%); /* Center vertically */
+  width: 100%;
+  /* Ensure the group spans the full width of the carousel */
+  transform: translateY(-50%);
+  /* Center vertically */
   display: flex;
-  justify-content: space-between; /* Align buttons to the left and right */
-  z-index: 10; /* Ensure it appears above other elements */
+  justify-content: space-between;
+  /* Align buttons to the left and right */
+  z-index: 10;
+  /* Ensure it appears above other elements */
 }
 
 .carousel-button-group button {
@@ -2424,11 +2587,13 @@ input[type="radio"] {
 }
 
 .carousel-button-group button.left {
-  left: 25px; /* Align the left button to the left */
+  left: 25px;
+  /* Align the left button to the left */
 }
 
 .carousel-button-group button.right {
-  right: 8px; /* Align the right button to the right */
+  right: 5px;
+  /* Align the right button to the right */
 }
 
 .custom-gradient {
@@ -2437,7 +2602,7 @@ input[type="radio"] {
 }
 
 .react-multi-carousel-track {
-  gap: 15px !important;
+  /* gap: 15px !important; */
 }
 
 /* .react-multi-carousel-item {
@@ -2452,6 +2617,7 @@ input[type="radio"] {
 .crosel-button:hover .btn-image {
   transform: rotate(45deg) !important;
 }
+
 .imagesdlkfjsldf {
   position: relative;
 }
@@ -2459,3 +2625,14 @@ input[type="radio"] {
 .blog-crosel-box-item1-box:hover .blog-title {
   transform: translateY(-30px) !important;
 }
+
+/* .react-multi-carousel-item {
+  width: 405px !important;
+}
+
+@media (max-width: 786px) {
+  .react-multi-carousel-item {
+    width: 390px !important;
+    margin: auto !important;
+  }
+} */

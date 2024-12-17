@@ -163,8 +163,8 @@ const BlogHero = () => {
         <div className="crosel-item1">
           <div className="hero-item-container">
             <div className="item-main1">
-              <h1 className="heading">Blogs</h1>
-              <h4 className="para">
+              <h1 className="item-blog-heading">Blogs</h1>
+              <h4 className="item-blog-para">
                 Discover how coaching serves as a transformative approach,
                 enabling individuals and organizations to achieve meaningful
                 growth. From practical strategies to profound insights, our blog
@@ -238,13 +238,16 @@ const BlogHero = () => {
             </div>
 
             {/* <img src="/images/h1.png" alt="" className="image-class" /> */}
-            <img
-              src="/images/m5.png"
-              alt="Description of the image"
-              width={700}
-              height={500}
-              className="image-class"
-            />
+
+            <div className="item-blog-image-section">
+              <img
+                src="/images/m5.png"
+                alt="Description of the image"
+                width={700}
+                height={500}
+                className="image-class"
+              />
+            </div>
           </div>
         </div>
 
