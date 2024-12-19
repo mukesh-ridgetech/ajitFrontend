@@ -76,7 +76,7 @@ const BookDiscovery = () => {
   };
   return (
     <div className="main-container">
-      <div className="book-apointment-main-container">
+      <div className="book-apointment-main-container" id="book-discovery">
         <div className="book-apointment-main-container-form">
           <div className="book-apointment-main-container-form-left">
             <h2 className="sub-heading">Book Your Discovery Call</h2>
@@ -251,7 +251,7 @@ const BookDiscovery = () => {
             <img
               src="/images/ft1.png"
               alt="Description of the image"
-              style={{ height: "670px", width: "auto" }}
+              style={{ height: "630px", width: "auto" }}
             />
           </div>
         </div>

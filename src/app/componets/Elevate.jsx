@@ -1,5 +1,12 @@
 // Elevate.js
+"use client";
 import React from "react";
+const scrollToBookDiscovery = () => {
+  const targetSection = document.getElementById("book-discovery");
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const Elevate = () => {
   return (
@@ -23,7 +30,11 @@ const Elevate = () => {
           </p>
         </div>
 
-        <button className="navbar-button" style={{ margin: "auto" }}>
+        <button
+          className="navbar-button"
+          style={{ margin: "auto" }}
+          onClick={scrollToBookDiscovery}
+        >
           Start Now
         </button>
       </div>
