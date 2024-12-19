@@ -251,7 +251,7 @@ const BookDiscovery = () => {
             <img
               src="/images/ft1.png"
               alt="Description of the image"
-              style={{ height: "630px", width: "auto" }}
+              className="book-recovery-image"
             />
           </div>
         </div>

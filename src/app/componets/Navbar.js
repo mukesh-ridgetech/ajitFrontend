@@ -89,7 +89,7 @@ const Navbar = ({ type }) => {
                   }}
                   className={` ${active === "About Us" ? "active" : ""}`}
                 >
-                  <a href="#">About Us</a>
+                  <a href="/about">About Us</a>
                 </li>
 
                 <li
