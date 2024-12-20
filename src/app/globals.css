@@ -2977,8 +2977,8 @@ input[type="radio"] {
 .about-vision-animated-box-upper-image-text {
   width: 70%;
   position: absolute;
-  top: 20px;
-  right: 5%;
+  top: 40px;
+  right: 1%;
 }
 
 .vision-heading {
@@ -3002,8 +3002,8 @@ input[type="radio"] {
   width: 70%;
   position: absolute;
   top: 20px;
-  left: 5%;
-  padding-top: 5%;
+  left: 4%;
+  padding-top: 4%;
 }
 
 .vision-heading1 {
@@ -3036,6 +3036,14 @@ input[type="radio"] {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.about-vision-animated-box-upper-image img {
+  max-width: 102%;
+}
+
+.about-vision-animated-box-upper-image img {
+  max-width: 102%;
 }
 
 @media (max-width: 768px) {
@@ -3082,9 +3090,15 @@ input[type="radio"] {
   }
 
   .about-vision-animated-box-upper-image img {
-    height: 170px;
+    height: 160px;
   }
 
+  .about-vision-animated-box-upper-image-text1 {
+    top: 9%;
+  }
+  .about-vision-animated-box-upper-image-text {
+    top: 20px;
+  }
   .vision-heading {
     color: #000;
     font-size: 16px;
@@ -3120,6 +3134,49 @@ input[type="radio"] {
     line-height: 16px; /* 150% */
     text-align: right;
   }
+
+  .navbar-container1 {
+    padding-left: 30px;
+  }
+
+  .option-label {
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .ant-modal .ant-modal-body {
+    padding: 0px;
+  }
+
+  .ant-modal .ant-modal-content {
+    padding: 0px;
+  }
+
+  .carousel-button-group button {
+    width: 27px !important;
+  }
 }
 
 /* kljbhjgj */
+
+@media (max-width: 500px) {
+  .carousel-container {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel-container {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 370px) {
+  .carousel-container {
+    padding-left: 5px;
+  }
+}
+
+.carousel-button-group button {
+  width: 27px !important;
+}

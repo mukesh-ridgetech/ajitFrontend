@@ -11,7 +11,7 @@ const AboutVision = () => {
             </h4>
           </div>
           <div className="about-vision-animated-box-upper-image">
-            <img src="/images/vi1.png" alt="" />
+            <img src="/images/av6.png" alt="" />
 
             <div className="about-vision-animated-box-upper-image-text">
               <h6 className="vision-heading">Mission</h6>
@@ -27,7 +27,7 @@ const AboutVision = () => {
           </div>
         </div>
         <div className="about-vision-animated-box-upper-image">
-          <img src="/images/vi2.png" alt="" />
+          <img src="/images/av7.png" alt="" />
           <div className="about-vision-animated-box-upper-image-text1">
             <h6 className="vision-heading1">Vision</h6>
             <p className="vision-para1">

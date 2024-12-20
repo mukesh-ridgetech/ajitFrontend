@@ -29,9 +29,9 @@ const FAQ = ({ faqs }) => {
             className="flex justify-between items-center cursor-pointer px-4"
           >
             <h3
-              className={`text-[18px] font-medium ${
+              className={`font-medium ${
                 activeIndex === index ? "text-white" : "text-gray-300"
-              }`}
+              } text-[14px] sm:text-[18px]`}
             >
               {faq.question}
             </h3>
