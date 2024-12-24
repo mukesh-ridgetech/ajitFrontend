@@ -33,11 +33,6 @@ export default function Home() {
       answer:
         " Yes, coaching is confidential. Coaches are bound by ethical codes to maintain client privacy and confidentiality.",
     },
-    {
-      question: "What makes Ridge Tech Corporation unique?",
-      answer:
-        "With a 97% client retention rate, Ridge Tech Corporation is trusted by over 60 satisfied clients and has delivered 100+ custom web and mobile app solutions. Our team of digital transformation experts offers tailored solutions to businesses of all sizes.",
-    },
 
     {
       question: "How long does coaching typically last?",
@@ -62,6 +57,7 @@ export default function Home() {
       <Navbar type={"Home"} />
       {/* <CustomModel /> */}
       <Hero />
+      <Progress />
       <CoachingPower />
       <TransformCouching />
       <Message />

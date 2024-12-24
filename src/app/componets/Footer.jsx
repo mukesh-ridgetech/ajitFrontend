@@ -24,7 +24,7 @@ const Footer = () => {
                   fill="#F2F2F2"
                 />
               </svg>
-              ajit.aj.jain@gmail.com
+              ajit@leadershipladder.in
             </p>
             <ul>
               <li>

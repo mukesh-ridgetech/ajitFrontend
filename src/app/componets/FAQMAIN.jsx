@@ -5,7 +5,7 @@ const FAQMAIN = ({ faqs }) => {
     <div className="main-container">
       <div className="faq-main-container">
         <div className="faq-main-container-left">
-          <h1 className="sub-heading">Frequently Asked Questions (FAQs)</h1>
+          <h1 className="sub-heading">Frequently Asked Questions</h1>
           <h4 className="semi-title">
             Your Guide to Understanding Coaching and How it can Transform Your
             Journey.

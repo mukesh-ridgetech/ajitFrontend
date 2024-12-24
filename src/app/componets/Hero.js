@@ -292,10 +292,10 @@ const Hero = () => {
           ssr={true} // means to render carousel on server-side.
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={2000}
+          autoPlaySpeed={4000}
           keyBoardControl={true}
           customTransition="all .5"
-          transitionDuration={1000}
+          transitionDuration={2000}
         >
           <div
             className="crosel-item"
@@ -381,7 +381,7 @@ const Hero = () => {
               </div>
               <div className="imagesdlkfjsldf" style={{ marginTop: "1.5%" }}>
                 <Image
-                  src="/images/h1.png"
+                  src="/images/h12.png"
                   alt="Description of the image"
                   width={720}
                   height={300}
@@ -474,11 +474,11 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="imagesdlkfjsldf">
+              <div className="imagesdlkfjsldf" style={{ marginTop: "1.5%" }}>
                 <Image
                   src="/images/h5.png"
                   alt="Description of the image"
-                  width={700}
+                  width={720}
                   height={300}
                 />
               </div>
@@ -568,11 +568,11 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="imagesdlkfjsldf">
+              <div className="imagesdlkfjsldf" style={{ marginTop: "1.5%" }}>
                 <Image
-                  src="/images/h6.png"
+                  src="/images/h62.png"
                   alt="Description of the image"
-                  width={703}
+                  width={720}
                   height={300}
                 />
               </div>

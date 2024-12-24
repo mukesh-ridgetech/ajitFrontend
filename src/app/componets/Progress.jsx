@@ -1,9 +1,9 @@
 import React from "react";
 import ProgressCircle from "./ProgressCircle";
-const Progress = () => {
+const Progress = ({ initialValues }) => {
   return (
     <div>
-      <ProgressCircle />
+      <ProgressCircle initialValues={initialValues} />
     </div>
   );
 };

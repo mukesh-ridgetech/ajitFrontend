@@ -49,7 +49,9 @@ const FAQ = ({ faqs }) => {
             }`}
           >
             <div className="mt-4 bg-opacity-30 p-4 rounded-md">
-              <p className="text-[16px] text-gray-300">{faq.answer}</p>
+              <p className="text-[14px] sm:text-[16px] text-gray-300">
+                {faq.answer}
+              </p>
             </div>
           </div>
         </div>

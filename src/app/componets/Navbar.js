@@ -45,7 +45,7 @@ const Navbar = ({ type }) => {
                 }}
                 className={` ${active === "Coaching" ? "active" : ""}`}
               >
-                <a href="#">Coaching</a>
+                <a href="/coauching">Coaching</a>
               </li>
 
               <li
@@ -98,7 +98,7 @@ const Navbar = ({ type }) => {
                   }}
                   className={` ${active === "Coaching" ? "active" : ""}`}
                 >
-                  <a href="#">Coaching</a>
+                  <a href="/coauching">Coaching</a>
                 </li>
 
                 <li
@@ -112,7 +112,7 @@ const Navbar = ({ type }) => {
               </ul>
             </div>
 
-            <button className="navbar-button">Contact Us</button>
+            {/* <button className="navbar-button">Contact Us</button> */}
           </div>
         </div>
       )}

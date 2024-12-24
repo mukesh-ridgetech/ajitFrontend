@@ -4,14 +4,14 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 // Initial progress values
-const initialValues = [
-  { percentage: 0, target: 50 },
-  { percentage: 0, target: 70 },
-  { percentage: 0, target: 90 },
-  { percentage: 0, target: 60 },
-];
+// const initialValues = [
+//   { percentage: 0, target: 50 },
+//   { percentage: 0, target: 70 },
+//   { percentage: 0, target: 90 },
+//   { percentage: 0, target: 60 },
+// ];
 
-const ProgressCircle = () => {
+const ProgressCircle = ({ initialValues = [] }) => {
   // State for managing the percentage and target for each progress bar
   const [progressBars, setProgressBars] = useState(initialValues);
 
@@ -29,8 +29,8 @@ const ProgressCircle = () => {
     const interval = setInterval(() => {
       setProgressBars((prevBars) =>
         prevBars.map((bar) => {
-          if (bar.percentage < bar.target) {
-            return { ...bar, percentage: bar.percentage + 1 }; // Increase percentage by 1
+          if (bar?.percentage < bar?.target) {
+            return { ...bar, percentage: bar?.percentage + 1 }; // Increase percentage by 1
           } else {
             return bar; // No change if the target is already reached
           }
@@ -43,21 +43,31 @@ const ProgressCircle = () => {
 
   return (
     <div
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        marginTop: "50px",
-      }}
+      // style={{
+      //   display: "flex",
+      //   justifyContent: "space-around",
+      //   marginTop: "50px",
+      //   height: "auto",
+      // }}
+
+      className="progress-bar-container"
     >
-      {progressBars.map((bar, index) => (
+      {progressBars?.map((bar, index) => (
         <div
           key={index}
-          style={{ width: "200px", height: "200px", textAlign: "center" }}
+          // style={{
+          //   width: "100px",
+          //   height: "100px",
+          //   textAlign: "center",
+          //   background: "#ffffff",
+          //   borderRadius: "50%",
+          // }}
+          className="progress-bar-content-container"
         >
           {/* Progress Bar */}
           <CircularProgressbar
-            value={bar.percentage}
-            text={`${bar.percentage}%`}
+            value={bar?.percentage}
+            text={`${bar?.percentage}%`}
             styles={buildStyles({
               pathColor: "#f1c40f", // Color of the progress bar
               textColor: "#f1c40f", // Color of the text inside the circle

@@ -2,6 +2,25 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
+// import Modal from "react-modal";
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
+
+// Set the modal's app element for accessibility (specific to Next.js)
+// if (typeof window !== "undefined") {
+//   Modal.setAppElement("#__next");
+// }
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
 const BookDiscovery = () => {
   const [selectedProgram, setSelectedProgram] = useState("");
   const [selectedType, setSelectedType] = useState(""); // Tracks the selected radio button
@@ -15,10 +34,27 @@ const BookDiscovery = () => {
     message: "",
   });
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+  // const handleSelection = (event) => {
+  //   const { value } = event.target;
+  //   setSelectedType(value);
+  //   setDisplayCorporateInput(value === "corporate");
+  // };
+
   const handleSelection = (event) => {
     const { value } = event.target;
     setSelectedType(value);
-    setDisplayCorporateInput(value === "corporate");
+
+    // Open modal if Enterprise is selected
+    if (value === "Enterprise") {
+      setOpen(true);
+    } else {
+      setOpen(false); // Close modal for Individual
+    }
   };
 
   const handleChange = (event) => {
@@ -150,25 +186,56 @@ const BookDiscovery = () => {
                       <input
                         type="radio"
                         name="coachingType"
-                        value="corporate"
-                        checked={selectedType === "corporate"}
+                        value="Enterprise"
+                        checked={selectedType === "Enterprise"}
                         onChange={handleSelection}
                       />
-                      Corporate
+                      Enterprise
                     </label>
                   </div>
-                  {displayCorporateInput && (
+                  {/* {displayCorporateInput && (
                     <div className="corporate-class">
                       <input
                         type="text"
-                        placeholder="Enter Company"
+                        placeholder="Enter Company Name"
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
                       />
                     </div>
-                  )}
+                  )} */}
                 </div>
+
+                {/* <Modal
+                  opened={isModalOpen}
+                  onClose={closeModal}
+                  title="Enter Company Name"
+                  centered
+                >
+                  <TextInput
+                    placeholder="Enter Company Name"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    label="Company Name"
+                    withAsterisk
+                  />
+                  <Button onClick={closeModal} mt="md" fullWidth>
+                    OK
+                  </Button>
+                </Modal> */}
+
+                <Modal open={open} onClose={onCloseModal} center>
+                  <div className="corporate-class">
+                    <input
+                      type="text"
+                      placeholder="Enter Company Name"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </Modal>
 
                 <div className="container-select">
                   <h3 className="select-option-label">
@@ -183,11 +250,14 @@ const BookDiscovery = () => {
                       <input
                         type="radio"
                         name="coachingProgram"
-                        value="executive"
-                        checked={selectedProgram === "executive"}
+                        value="One-on-One Executive Coaching (Enterprise)"
+                        checked={
+                          selectedProgram ===
+                          "One-on-One Executive Coaching (Enterprise)"
+                        }
                         onChange={handleChange}
                       />
-                      One-on-One Executive Coaching
+                      One-on-One Executive Coaching (Enterprise)
                     </label>
                     <label
                       className={`radio-option ${
@@ -197,11 +267,16 @@ const BookDiscovery = () => {
                       <input
                         type="radio"
                         name="coachingProgram"
-                        value="personal"
-                        checked={selectedProgram === "personal"}
+                        value="Stakeholder-Centered Coaching Business Leaders
+                      (Enterprise)"
+                        checked={
+                          selectedProgram ===
+                          "Stakeholder-Centered Coaching Business Leaders(Enterprise)"
+                        }
                         onChange={handleChange}
                       />
-                      One-on-One Coaching (Personal/Professional Growth)
+                      Stakeholder-Centered Coaching Business Leaders
+                      (Enterprise)
                     </label>
                     <label
                       className={`radio-option ${
@@ -211,11 +286,13 @@ const BookDiscovery = () => {
                       <input
                         type="radio"
                         name="coachingProgram"
-                        value="business"
-                        checked={selectedProgram === "business"}
+                        value="One-on-One Coaching (Individual)"
+                        checked={
+                          selectedProgram === "One-on-One Coaching (Individual)"
+                        }
                         onChange={handleChange}
                       />
-                      Stakeholder-Centered Coaching for Business Leaders
+                      One-on-One Coaching (Individual)
                     </label>
                   </div>
                 </div>

@@ -35,7 +35,7 @@ const Elevate = () => {
           style={{ margin: "auto" }}
           onClick={scrollToBookDiscovery}
         >
-          Start Now
+          Contact Us
         </button>
       </div>
     </div>

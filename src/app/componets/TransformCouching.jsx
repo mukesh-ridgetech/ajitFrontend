@@ -26,7 +26,9 @@ const TransformCouching = () => {
         <div className="transform-couching-tab-section">
           <div id="transform-couching-tab-section-main-default">
             <div className="transform-couching-tab-section-main-left">
-              <h4 className="para3">One-on-One Executive Coaching</h4>
+              <h4 className="para3">
+                One-on-One Executive Coaching (Enterprise)
+              </h4>
             </div>
 
             <div className="transform-couching-tab-section-main-right">
@@ -64,7 +66,7 @@ const TransformCouching = () => {
           <div className="transform-couching-tab-section-main">
             <div className="transform-couching-tab-section-main-left">
               <h4 className="para3">
-                One-on-One Coaching (Personal/Professional Growth)
+                Stakeholder-Centered Coaching Business Leaders (Enterprise)
               </h4>
             </div>
 
@@ -99,9 +101,7 @@ const TransformCouching = () => {
 
           <div className="transform-couching-tab-section-main">
             <div className="transform-couching-tab-section-main-left">
-              <h4 className="para3">
-                Stakeholder-Centered Coaching for Business Leaders{" "}
-              </h4>
+              <h4 className="para3">One-on-One Coaching (Individual)</h4>
             </div>
 
             <div className="transform-couching-tab-section-main-right">
