@@ -5,6 +5,7 @@ import { FaBars } from "react-icons/fa";
 const Navbar = ({ type }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState(type);
+  const [dropdown, setDropDown] = useState(false);
 
   const handleActive = (item) => {
     setActive(item);
@@ -13,6 +14,11 @@ const Navbar = ({ type }) => {
   const handleMenuClick = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const handleDropdown = () => {
+    setDropDown(!dropdown);
+  };
+
   return (
     <div className="navbar-container1">
       <div className="navbar-left-container">
@@ -40,13 +46,41 @@ const Navbar = ({ type }) => {
               </li>
 
               <li
-                onClick={() => {
-                  handleActive("Coaching");
-                }}
+                // onClick={() => {
+                //   handleActive("Coaching");
+                // }}
+
+                onClick={handleDropdown}
                 className={` ${active === "Coaching" ? "active" : ""}`}
               >
-                <a href="/coauching">Coaching</a>
+                <a href="#">Coaching</a>
               </li>
+
+              {dropdown && (
+                <div className="Nav-dropdown-content">
+                  <ul>
+                    <li>
+                      <a href="/stack-holder">
+                        One-on-One Executive Coaching (Enterprise)
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/coaching">
+                        Stakeholder-Centered Coaching for Business Leaders
+                        (Enterprise)
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/executive">
+                        One-on-One Coaching (Personal/Professional Growth)-
+                        Individual
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
 
               <li
                 onClick={() => {
