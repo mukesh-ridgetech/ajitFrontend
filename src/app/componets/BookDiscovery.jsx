@@ -39,23 +39,24 @@ const BookDiscovery = () => {
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
-  // const handleSelection = (event) => {
-  //   const { value } = event.target;
-  //   setSelectedType(value);
-  //   setDisplayCorporateInput(value === "corporate");
-  // };
 
   const handleSelection = (event) => {
     const { value } = event.target;
     setSelectedType(value);
-
-    // Open modal if Enterprise is selected
-    if (value === "Enterprise") {
-      setOpen(true);
-    } else {
-      setOpen(false); // Close modal for Individual
-    }
+    setDisplayCorporateInput(value === "Enterprise");
   };
+
+  // const handleSelection = (event) => {
+  //   const { value } = event.target;
+  //   setSelectedType(value);
+
+  //   // Open modal if Enterprise is selected
+  //   if (value === "Enterprise") {
+  //     setOpen(true);
+  //   } else {
+  //     setOpen(false); // Close modal for Individual
+  //   }
+  // };
 
   const handleChange = (event) => {
     setSelectedProgram(event.target.value);
@@ -193,7 +194,7 @@ const BookDiscovery = () => {
                       Enterprise
                     </label>
                   </div>
-                  {/* {displayCorporateInput && (
+                  {displayCorporateInput && (
                     <div className="corporate-class">
                       <input
                         type="text"
@@ -203,7 +204,7 @@ const BookDiscovery = () => {
                         onChange={handleInputChange}
                       />
                     </div>
-                  )} */}
+                  )}
                 </div>
 
                 {/* <Modal
@@ -225,7 +226,7 @@ const BookDiscovery = () => {
                   </Button>
                 </Modal> */}
 
-                <Modal open={open} onClose={onCloseModal} center>
+                {/* <Modal open={open} onClose={onCloseModal} center>
                   <div className="corporate-class">
                     <input
                       type="text"
@@ -235,7 +236,7 @@ const BookDiscovery = () => {
                       onChange={handleInputChange}
                     />
                   </div>
-                </Modal>
+                </Modal> */}
 
                 <div className="container-select">
                   <h3 className="select-option-label">

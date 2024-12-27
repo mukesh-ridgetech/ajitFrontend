@@ -9,9 +9,7 @@ const CoauchingHero = () => {
       </video>
 
       <div className="couaching-hero-heading-box">
-        <h1 className="couaching-hero-heading">
-          One-on-One Executive Coaching (Enterprise)
-        </h1>
+        <h1 className="couaching-hero-heading">Executive Coaching</h1>
       </div>
 
       <div className="couching-button">

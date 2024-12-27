@@ -11,7 +11,7 @@ import Coaching1Hero from "../componets/Coaching1Hero";
 const page = () => {
   return (
     <div>
-      <Navbar Coaching={"Coaching"} />
+      <Navbar type={"Coaching"} />
       <Coaching1Hero />
       <Benifi />
       <Impact />

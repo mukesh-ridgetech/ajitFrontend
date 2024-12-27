@@ -209,6 +209,12 @@ body {
     /* 150% */
     text-transform: capitalize;
   }
+
+  .sub-heading2 {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+  }
 }
 
 /* navbar */
@@ -470,10 +476,10 @@ body {
 .Nav-dropdown-content {
   position: absolute;
   top: 8%;
-  left: 35%;
+  left: 46%;
   z-index: 5;
   background-color: white;
-  width: auto;
+  width: 384px;
   padding: 20px;
   flex-shrink: 0;
   border-radius: 0px 0px 10px 10px;
@@ -495,6 +501,11 @@ body {
 }
 
 .Nav-dropdown-content ul a:hover {
+  color: #8e5af8;
+  /* border-bottom: 1px solid #8e5af8; */
+}
+
+.Nav-dropdown-mobile ul a:hover {
   color: #8e5af8;
   /* border-bottom: 1px solid #8e5af8; */
 }
@@ -946,7 +957,7 @@ body {
   max-width: 300px;
   width: 270px;
   border-radius: 15px;
-  background: #f5ce67;
+  /* background: #f5ce67; */
 }
 
 @media (max-width: 768px) {
@@ -1400,21 +1411,21 @@ body {
 .radio-group1 {
   display: flex;
   /* flex-direction: column; */
-  gap: 10px;
+  gap: 30px;
 }
 
 .radio-option {
   font-size: 16px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1px;
   color: #f2f2f299;
 }
 
 .radio-option input[type="radio"] {
   accent-color: #f2f2f2;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .radio-group1 .active {
@@ -1430,7 +1441,7 @@ body {
 }
 
 .book-recovery-image {
-  height: 630px;
+  height: 650px;
   width: auto;
 }
 
@@ -1563,7 +1574,7 @@ body {
   padding-right: 20px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 5px;
   /* border: 1px solid red; */
 }
 
@@ -3218,7 +3229,7 @@ input[type="radio"] {
 .about-vision-animated-box-upper-image-text {
   width: 70%;
   position: absolute;
-  top: 40px;
+  top: 69px;
   right: 1%;
 }
 
@@ -3244,8 +3255,8 @@ input[type="radio"] {
 .about-vision-animated-box-upper-image-text1 {
   width: 70%;
   position: absolute;
-  top: 20px;
-  left: 4%;
+  top: 13px;
+  left: 2%;
   padding-top: 4%;
 }
 
@@ -3461,11 +3472,11 @@ input[type="radio"] {
 .impact-main-container {
   padding-left: 23px;
   padding-right: 23px;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
 
 .imapact-progress-container {
@@ -3700,9 +3711,9 @@ input[type="radio"] {
 .couaching-hero-heading-box {
   position: absolute;
   z-index: 1;
-  width: 70%;
+  width: 50%;
   top: 10%;
-  left: 30%;
+  left: 50%;
 }
 
 .couaching-hero-heading {
@@ -3891,7 +3902,7 @@ input[type="radio"] {
 }
 
 .marque-text {
-  color: #f2f2f2;
+  color: #020202;
   text-align: center;
   font-size: 24px;
   font-style: normal;
@@ -3928,9 +3939,9 @@ input[type="radio"] {
   height: 264px;
   padding: 20px;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   border-radius: 30px;
   /* background: #f5ce67; */
 }
@@ -3938,7 +3949,7 @@ input[type="radio"] {
 .benifit-para {
   color: #020202;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
@@ -3963,7 +3974,7 @@ input[type="radio"] {
 /* Proven section */
 
 .proven-main-container {
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 40px;
   width: 100%;
 }
@@ -4206,11 +4217,15 @@ input[type="radio"] {
   background: #767bf3;
 }
 
+.line-box {
+  width: 80px;
+  border: 1px solid black;
+}
 /* Benifit Box */
 
 .binifit-sectioin-main-container {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 30px;
 }
 
@@ -4248,7 +4263,7 @@ input[type="radio"] {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .benifit-para-section-now {
@@ -4256,7 +4271,7 @@ input[type="radio"] {
   margin: auto;
   display: flex;
   gap: 50px;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .benifit-para-section-now-box {
@@ -4308,7 +4323,7 @@ input[type="radio"] {
 /* Essential Box */
 
 .essential-main-container {
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   /* padding-top: 30px; */
 }
 
@@ -4373,7 +4388,8 @@ input[type="radio"] {
 }
 
 .essential-image {
-  width: 70px;
+  height: 70px;
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -4407,14 +4423,14 @@ input[type="radio"] {
   width: 20%;
   position: absolute;
   left: 22%;
-  top: 41%;
+  top: 42%;
 }
 
 .leadership-para-box1 {
   width: 20%;
   position: absolute;
   left: 9%;
-  bottom: 33%;
+  bottom: 32%;
 }
 
 .leadership-para-box2 {
@@ -4570,7 +4586,7 @@ input[type="radio"] {
   /* Full viewport height */
   width: 100%;
   /* Full viewport width */
-  background-image: url("/images/about.png");
+  background-image: url("/images/co1.png");
   /* Replace with your image path */
   background-size: cover;
   /* Ensures the image covers the entire div */
@@ -4583,13 +4599,14 @@ input[type="radio"] {
 
 .about-hero-content1 {
   padding-left: 100px;
-  padding-top: 65px;
+  padding-top: 15px;
   padding-bottom: 150px;
 }
 
 .about-hero-content-upper-div1 {
-  width: 70%;
-  margin-left: 20%;
+  width: 60%;
+  margin-left: 36%;
+  margin-top: 5%;
 }
 
 .about-hero-content-heading1 {
@@ -4639,6 +4656,21 @@ input[type="radio"] {
 }
 
 @media (max-width: 768px) {
+  .about-hero-container1 {
+    height: 43vh;
+  }
+
+  .about-hero-content1 {
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 150px;
+  }
+
+  .about-hero-content-upper-div1 {
+    width: 100%;
+    margin-left: 10px;
+  }
+
   .about-hero-content-upper-div1 {
     width: 100%;
   }
@@ -4647,12 +4679,17 @@ input[type="radio"] {
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 35px;
     /* 150% */
     background: linear-gradient(90deg, #fff 0.76%, #8b52ff 91.66%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .benifit-heading {
+    font-size: 24px;
+    line-height: 30px;
   }
 
   .about-hero-content-para1 {
@@ -4673,7 +4710,7 @@ input[type="radio"] {
   /* Full viewport height */
   width: 100%;
   /* Full viewport width */
-  background-image: url("/images/about.png");
+  background-image: url("/images/co2.png");
   /* Replace with your image path */
   background-size: cover;
   /* Ensures the image covers the entire div */

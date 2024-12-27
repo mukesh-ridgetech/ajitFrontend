@@ -6,7 +6,8 @@ const Coaching1Hero = () => {
       <div className="about-hero-content1">
         <div className="about-hero-content-upper-div1">
           <h1 className="about-hero-content-heading1">
-            One-on-One Coaching (Personal/Professional Growth)
+            Coaching
+            <br /> Personal/Professional Growth{" "}
           </h1>
           {/* <p className="about-hero-content-para1">
             Empowering leaders to embrace opportunities, overcome barriers, and

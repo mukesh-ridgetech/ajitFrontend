@@ -290,7 +290,7 @@ const Hero = () => {
           showDots={true}
           responsive={responsive}
           ssr={true} // means to render carousel on server-side.
-          // infinite={true}
+          infinite={true}
           autoPlay={true}
           autoPlaySpeed={4000}
           keyBoardControl={true}
@@ -480,6 +480,7 @@ const Hero = () => {
                   alt="Description of the image"
                   width={720}
                   height={300}
+                  // className=" ml-[20px]"
                 />
               </div>
             </div>

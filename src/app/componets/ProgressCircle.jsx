@@ -69,9 +69,9 @@ const ProgressCircle = ({ initialValues = [] }) => {
             value={bar?.percentage}
             text={`${bar?.percentage}%`}
             styles={buildStyles({
-              textSize: "30px",
-              pathColor: "#FF8C00", // Color of the progress bar
-              textColor: "#FF8C00", // Color of the text inside the circle
+              textSize: "28px",
+              pathColor: "#d78a25", // Color of the progress bar
+              textColor: "#d78a25", // Color of the text inside the circle
               trailColor: "#e0e0e0", // Background circle color
               strokeLinecap: "round", // Rounded edges for the progress path
               pathTransitionDuration: 0.5, // Smooth animation of progress

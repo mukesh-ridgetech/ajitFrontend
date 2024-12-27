@@ -73,12 +73,12 @@ const TransformCouching = () => {
             <div className="transform-couching-tab-section-main-right">
               <div className="transform-couching-tab-section-main-right">
                 <p className="para">
-                  A personalized approach designed to meet your unique goals and
-                  challenges. Focus on the areas that matter most to you, from
-                  professional growth, career, and financial wellness to family
-                  connections, spiritual alignment, social fulfilment, emotional
-                  resilience, and health. Choose multiple areas for a truly
-                  holistic journey toward personal and professional excellence.
+                  Stakeholder-Centered Coaching is an innovative approach to
+                  coaching that emphasizes the involvement and perspectives of
+                  key stakeholders in the coaching process. This method focuses
+                  on aligning the goals and development of the individual being
+                  coached with the needs and expectations of their organization
+                  and stakeholders.
                 </p>
               </div>
               <div>
@@ -107,12 +107,12 @@ const TransformCouching = () => {
             <div className="transform-couching-tab-section-main-right">
               <div className="transform-couching-tab-section-main-right">
                 <p className="para">
-                  Stakeholder-Centered Coaching is an innovative approach to
-                  coaching that emphasizes the involvement and perspectives of
-                  key stakeholders in the coaching process. This method focuses
-                  on aligning the goals and development of the individual being
-                  coached with the needs and expectations of their organization
-                  and stakeholders.
+                  A personalized approach designed to meet your unique goals and
+                  challenges. Focus on the areas that matter most to you, from
+                  professional growth, career, and financial wellness to family
+                  connections, spiritual alignment, social fulfilment, emotional
+                  resilience, and health. Choose multiple areas for a truly
+                  holistic journey toward personal and professional excellence.
                 </p>
               </div>
               <div>

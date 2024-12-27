@@ -7,7 +7,7 @@ import Progress from "../componets/Progress";
 import Bebifit1 from "../componets/Bebifit1";
 import Impact from "../componets/Impact";
 import CoauchingTransformation from "../componets/CoauchingTransformation";
-
+import CoauchingTransformation1 from "../componets/CoauchingTransformation1";
 const page = () => {
   return (
     <div>
@@ -15,7 +15,7 @@ const page = () => {
       <CoauchingHero />
       <Bebifit1 />
       <Impact />
-      <CoauchingTransformation />
+      <CoauchingTransformation1 />
       <Proven />
       <BookDiscovery />
       <Footer />

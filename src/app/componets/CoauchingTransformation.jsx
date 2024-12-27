@@ -39,7 +39,7 @@ const CoauchingTransformation = () => {
       </Marquee>
 
       <div className="marque-heading-box">
-        <p className="semi-heading">Personal Challenges</p>
+        <p className="semi-heading">Professional Challenges</p>
       </div>
 
       <Marquee
