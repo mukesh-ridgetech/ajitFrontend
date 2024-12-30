@@ -3731,6 +3731,10 @@ input[type="radio"] {
     line-height: 20px;
     /* 120% */
   }
+
+  .imapact-progress-container-left-heading {
+    font-size: 22px;
+  }
 }
 
 /* Coauching hero section */
@@ -4465,6 +4469,11 @@ input[type="radio"] {
 @media (max-width: 768px) {
   .Essential-main-box-container {
     width: 100%;
+  }
+
+  .essential-image {
+    height: 100px;
+    margin-right: 10px;
   }
 
   .Essential-Box {
