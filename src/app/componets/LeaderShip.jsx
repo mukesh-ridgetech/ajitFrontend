@@ -45,7 +45,7 @@ const LeaderShip = () => {
         </div>
       </div>
 
-      <div>
+      <div className="leadership-image-mobile">
         <h1 className="benifit-section-main-heading">
           Stakeholder Centric Leadership Coaching Process
         </h1>

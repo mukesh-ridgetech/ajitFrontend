@@ -1,6 +1,6 @@
 // components/CustomCarousel.js
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { redirect } from "next/navigation";
 import Image from "next/image";
 import { Modal } from "antd";
@@ -20,6 +20,25 @@ const BlogHero = () => {
   //   setIsOpen(false);
   // };
 
+  const [currentImage, setCurrentImage] = useState("/images/f1.png"); // Default image
+  const [currentImage1, setCurrentImage1] = useState("/images/c3.png");
+
+  const handleMouseEnter = () => {
+    setCurrentImage("/images/v2.png"); // Hover image
+  };
+
+  const handleMouseLeave = () => {
+    setCurrentImage("/images/f1.png"); // Default image
+  };
+
+  const handleMouseEnter1 = () => {
+    setCurrentImage1("/images/h7.png"); // Hover image
+  };
+
+  const handleMouseLeave1 = () => {
+    setCurrentImage1("/images/c3.png"); // Default image
+  };
+
   const questions = [
     {
       id: 1,
@@ -36,29 +55,77 @@ const BlogHero = () => {
 
     {
       id: 2,
-      question:
-        "What area of your life would you like the most clarity and direction in?",
+      question: "How do you like to work towards personal growth?",
       options: [
-        "Defining clear goals and identifying actionable steps to pursue them.",
-        "Building a meaningful career that aligns with my passions and core values.",
-        "Achieving financial security and creating the life I envision.",
-        "Harmonizing personal and professional priorities for a more balanced and fulfilling life.",
-        "Finding purpose and building a deeper sense of self and identity.",
+        "Engaging in self-reflection and seeking personalized guidance to uncover my path.",
+        "Working with a coach or mentor who provides accountability and support in reaching my goals.",
+        "Embracing lifelong learning to adapt and thrive across various life areas, such as career, relationships, spirituality, and finances.",
+        "Seeking immersive experiences that reignite my passions and focus on holistic growth.",
       ],
     },
 
     {
       id: 3,
       question:
-        "What area of your life would you like the most clarity and direction in?",
+        "What is your belief system with respect to your personal and professional growth?",
       options: [
-        "Defining clear goals and identifying actionable steps to pursue them.",
-        "Building a meaningful career that aligns with my passions and core values.",
-        "Achieving financial security and creating the life I envision.",
-        "Harmonizing personal and professional priorities for a more balanced and fulfilling life.",
-        "Finding purpose and building a deeper sense of self and identity.",
+        "I believe in continuous growth and that meaningful achievements come from consistent effort and evolution.",
+        "Life’s goals and purpose are constantly evolving, and I need to invest time in self-reflection and skill enhancement.",
+        "Past experiences shape limiting beliefs; regular guidance and support help me unlock my full potential.",
+        "Time is a precious resource, and I must focus on high-impact actions to achieve my best self.",
       ],
     },
+
+    {
+      id: 4,
+      question:
+        "What kind of support do you feel would be most beneficial for your growth journey?",
+      options: [
+        "Structured guidance with actionable steps and regular check-ins.",
+        "A listening ear and someone to challenge my thought process.",
+        "Tools and resources to improve specific skills or areas of my life.",
+        "Freedom to explore and experiment with occasional feedback.",
+      ],
+    },
+    // Add more questions here
+  ];
+
+  const questions2 = [
+    {
+      id: 1,
+      question:
+        "What factors drive overall effectiveness in achieving organizational goals?",
+      options: [
+        "Continuous development and refinement of leadership skills to adapt to evolving challenges.",
+        "Strong team camaraderie and organizational health resulting from a cohesive and mature leadership team.",
+        "Cultivating a learning culture where leaders engage in self-discovery to maximize their potential.",
+        "Alignment of leaders with the organization’s vision and values to drive unified efforts.",
+      ],
+    },
+
+    {
+      id: 2,
+      question:
+        "According to you, what benefits can be achieved by enhancing the overall leadership capabilities within your organization?",
+      options: [
+        "A highly motivated workforce inspired by positive leadership behaviours.",
+        "Increased productivity and stronger alignment with organizational goals.",
+        "An organization built on impactful, emotionally intelligent, and capable leaders.",
+        "Optimized leadership strengths that drive exceptional team performance.",
+      ],
+    },
+
+    {
+      id: 3,
+      question:
+        "Optimized leadership strengths that drive exceptional team performance.",
+      options: [
+        "Establish a platform where leaders can plan, execute, and track their growth journey.",
+        "Invest in programs that motivate leaders and help them discover their true potential.",
+        "Provide access to a neutral, supportive coach or mentor who can offer guidance and perspective.",
+      ],
+    },
+
     // Add more questions here
   ];
 
@@ -77,15 +144,39 @@ const BlogHero = () => {
 
   // Handle navigation
   const handleNext = () => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+    if (answers[questions[currentQuestion]?.id]) {
+      if (currentQuestion < questions.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        closeModal2();
+        openModal4();
+      }
     } else {
-      closeModal2();
-      openModal4();
+      alert("Please select an option before proceeding!");
     }
   };
 
   const handlePrevious = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+    }
+  };
+
+  const handleNext1 = () => {
+    // Check if the current question has been answered
+    if (answers[questions2[currentQuestion]?.id]) {
+      if (currentQuestion < questions2.length - 1) {
+        setCurrentQuestion(currentQuestion + 1); // Move to the next question
+      } else {
+        closeModal6(); // Close the current modal
+        openModal8(); // Open the next modal
+      }
+    } else {
+      alert("Please select an option before proceeding!");
+    }
+  };
+
+  const handlePrevious1 = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
     }
@@ -103,6 +194,7 @@ const BlogHero = () => {
   };
 
   const [isModalOpen2, setIsModalOpen2] = useState(false);
+  const [datashow, setdatashow] = useState(false);
 
   const openModal2 = () => {
     setIsModalOpen2(true);
@@ -116,6 +208,22 @@ const BlogHero = () => {
 
   const closeModal2 = () => {
     setIsModalOpen2(false);
+  };
+
+  const [isModalOpen6, setIsModalOpen6] = useState(false);
+
+  const openModal6 = () => {
+    setIsModalOpen6(true);
+    setIsModalOpen(false);
+    closeModal1();
+    setAnswers({}); // Reset answers
+    setCurrentQuestion(0); // Go back to the first question
+
+    // setIsModalOpen(false);
+  };
+
+  const closeModal6 = () => {
+    setIsModalOpen6(false);
   };
 
   // CustomModal
@@ -138,6 +246,25 @@ const BlogHero = () => {
   const closeModal4 = () => {
     setIsModalOpen4(false);
   };
+
+  const [isModalOpen8, setIsModalOpen8] = useState(false);
+
+  const openModal8 = () => {
+    setIsModalOpen8(true);
+    // setIsModalOpen(false);
+  };
+
+  const closeModal8 = () => {
+    setIsModalOpen8(false);
+  };
+
+  useEffect(() => {
+    if (currentQuestion === questions?.length) {
+      setAnswers({});
+    } else if (currentQuestion === questions2?.length) {
+      setAnswers({});
+    }
+  }, [currentQuestion]);
 
   const responsive = {
     desktop: {
@@ -347,24 +474,42 @@ const BlogHero = () => {
           borderRadius: "10px",
         }}
         closeIcon={<span style={{ color: "#fff", fontSize: "18px" }}>✖</span>}
+        title={
+          <div
+            style={{
+              backgroundColor: "#000",
+              textAlign: "center",
+              color: "#fff",
+              padding: "10px",
+            }}
+          >
+            <p style={{ fontSize: "12px", margin: 0 }}>
+              {`${currentQuestion + 1} out of ${questions?.length}`}
+            </p>
+          </div>
+        }
       >
         <div className="modal-body">
           <div>
             <div className="quiz-container">
-              <div className="quiz-header">
-                <p>{`Question ${currentQuestion + 1} out of ${
-                  questions.length
-                }`}</p>
-              </div>
+              {/* <div className="quiz-header">
+                    <p
+                      style={{
+                        fontSize: "12px",
+                        textAlign: "center",
+                        backgroundColor: "transparent",
+                      }}
+                    >{`${currentQuestion + 1} out of ${questions?.length}`}</p>
+                  </div> */}
 
               <div className="quiz-question">
                 <h2 className="sub-semi-heading">
-                  {questions[currentQuestion].question}
+                  {questions[currentQuestion]?.question}
                 </h2>
               </div>
 
               <div className="quiz-options">
-                {questions[currentQuestion].options.map((option, index) => (
+                {questions[currentQuestion]?.options?.map((option, index) => (
                   <label key={index} className="option-label">
                     <input
                       type="radio"
@@ -390,20 +535,125 @@ const BlogHero = () => {
                   onClick={handlePrevious}
                   disabled={currentQuestion === 0}
                 >
-                  Previous
+                  {/* <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M8.6 12L14.6 6L16 7.4L11.4 12L16 16.6L14.6 18L8.6 12Z"
+                          fill="#F2F2F2"
+                        />
+                      </svg> */}
+                  &lt;
                 </button>
                 <button
                   onClick={handleNext}
-                  // disabled={currentQuestion === questions.length - 1}
+                  disabled={!answers[questions[currentQuestion]?.id]}
                 >
-                  Next
+                  {/* <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M15.4 12L9.4 6L8 7.4L12.6 12L8 16.6L9.4 18L15.4 12Z"
+                          fill="#F2F2F2"
+                        />
+                      </svg> */}
+                  &gt;
                 </button>
               </div>
 
               {/* <div className="quiz-debug">
-                <h3>Answers Debug:</h3>
-                <pre>{JSON.stringify(answers, null, 2)}</pre>
-              </div> */}
+                    <h3>Answers Debug:</h3>
+                    <pre>{JSON.stringify(answers, null, 2)}</pre>
+                  </div> */}
+            </div>
+          </div>
+        </div>
+      </Modal>
+
+      <Modal
+        open={isModalOpen6}
+        onCancel={closeModal6}
+        footer={null}
+        centered
+        bodyStyle={{
+          backgroundColor: "#000",
+          textAlign: "center",
+          padding: "20px",
+          borderRadius: "10px",
+        }}
+        closeIcon={<span style={{ color: "#fff", fontSize: "18px" }}>✖</span>}
+        title={
+          <div
+            style={{
+              backgroundColor: "#000",
+              textAlign: "center",
+              color: "#fff",
+              padding: "10px",
+            }}
+          >
+            <p style={{ fontSize: "12px", margin: 0 }}>
+              {`${currentQuestion + 1} out of ${questions2?.length}`}
+            </p>
+          </div>
+        }
+      >
+        <div className="modal-body">
+          <div>
+            <div className="quiz-container">
+              {/* <div className="quiz-header">
+                    <p>{`${currentQuestion + 1} out of ${questions2?.length}`}</p>
+                  </div> */}
+
+              <div className="quiz-question">
+                <h2 className="sub-semi-heading">
+                  {questions2[currentQuestion]?.question}
+                </h2>
+              </div>
+
+              <div className="quiz-options">
+                {questions2[currentQuestion]?.options?.map((option, index) => (
+                  <label key={index} className="option-label">
+                    <input
+                      type="radio"
+                      name={`question-${questions[currentQuestion].id}`}
+                      value={option}
+                      checked={
+                        answers[questions[currentQuestion].id] === option
+                      }
+                      onChange={() =>
+                        handleOptionChange(
+                          questions[currentQuestion].id,
+                          option
+                        )
+                      }
+                    />
+                    {option}
+                  </label>
+                ))}
+              </div>
+
+              <div className="quiz-footer">
+                <button
+                  onClick={handlePrevious1}
+                  disabled={currentQuestion === 0}
+                >
+                  &lt;
+                </button>
+                <button
+                  onClick={handleNext1}
+                  disabled={!answers[questions2[currentQuestion]?.id]}
+                >
+                  &gt;
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -428,8 +678,91 @@ const BlogHero = () => {
           <div className="tankyou-conatainer">
             <div className="tankyou-conatainer-left">
               <div>
-                <h1 className="sub-heading1">Thank You For Taking Quiz</h1>
-                <p className="para1">
+                <h1 className="tankyou-heading">Thank You For Taking Quiz</h1>
+                <p className="thank-para">
+                  Your responses reflect a strong commitment to fostering
+                  meaningful change within your organization’s leadership.
+                  Executive Coaching and Stakeholder-Centered Coaching are
+                  transformative solutions that can enhance leadership
+                  performance, cultivate a culture of excellence, and amplify
+                  your organization’s overall impact.
+                </p>
+              </div>
+
+              <div className="quize-ul-tag">
+                <h2
+                  style={{
+                    fontSize: "24px",
+                    color: "white",
+                    fontWeight: "600",
+                    textAlign: "left",
+                  }}
+                >
+                  What’s Next?
+                </h2>
+                <ul>
+                  <li>
+                    <p className="para1">
+                      Discover Our Services: Visit our [Home Page] to explore
+                      how our coaching programs can support your leaders and
+                      drive organizational growth.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p className="para1">
+                      Contact Us: Have questions or want to learn more? Reach
+                      out to us through the [Contact Us] page, and we’ll be
+                      happy to assist you.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="para3">
+                  <span id="span">
+                    Together, we can unlock the full potential of your leaders
+                    and take your organization to new heights.
+                  </span>
+                  <br />
+                  <br /> We look forward to partnering with you.
+                </h2>
+              </div>
+            </div>
+            <div className="tankyou-conatainer-right">
+              <Image
+                src="/images/m4.png"
+                alt="Description of the image"
+                width={500}
+                height={300}
+              />
+            </div>
+          </div>
+        </div>
+      </Modal>
+
+      <Modal
+        open={isModalOpen8}
+        onCancel={closeModal8}
+        footer={null}
+        centered
+        // styles={{
+        //   body: {
+        //     backgroundColor: "#000",
+        //     textAlign: "center",
+        //     padding: "20px",
+        //     borderRadius: "10px",
+        //   },
+        // }}
+        closeIcon={<span style={{ color: "#fff", fontSize: "18px" }}>✖</span>}
+      >
+        <div className="modal-body">
+          <div className="tankyou-conatainer">
+            <div className="tankyou-conatainer-left">
+              <div>
+                <h1 className="tankyou-heading">Thank You For Taking Quiz</h1>
+                <p className="thank-para">
                   Your responses reflect a strong commitment to fostering
                   meaningful change within your organization’s leadership.
                   Executive Coaching and Stakeholder-Centered Coaching are
@@ -507,20 +840,25 @@ const BlogHero = () => {
                 <div className="option" onClick={openModal2}>
                   <div className="circle">
                     <img
-                      src="/images/f1.png" // Replace with actual "Individual" icon
-                      alt="Individual"
+                      src={currentImage}
+                      alt="Hover to change"
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                      // style={{ width: "120px", height: "120px" }}
                     />
                   </div>
-                  <p className="label">Individual</p>
+                  <p className="label-purple">Individual</p>
                 </div>
-                <div className="option" onClick={openModal2}>
+                <div className="option" onClick={openModal6}>
                   <div className="circle">
                     <img
-                      src="/images/f2.png" // Replace with actual "Corporate" icon
-                      alt="Corporate"
+                      src={currentImage1}
+                      alt="Hover to change"
+                      onMouseEnter={handleMouseEnter1}
+                      onMouseLeave={handleMouseLeave1}
                     />
                   </div>
-                  <p className="label purple">Corporate</p>
+                  <p className="label-purple">Corporate</p>
                 </div>
               </div>
             </div>

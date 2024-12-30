@@ -5,7 +5,9 @@ const Footer = () => {
     <div className="main-container">
       <div className="footer-main-section">
         <div className="footer-content-section">
-          <div className="navbar-logo-button"></div>
+          <div className="footer-logo">
+            <img src="/images/logo.png" alt="" style={{ height: "55px" }} />
+          </div>
           <div className="footer-heading">
             <h4>Get In Touch</h4>
           </div>
@@ -28,19 +30,19 @@ const Footer = () => {
             </p>
             <ul>
               <li>
-                <a href="">Home</a>
+                <a href="/">Home</a>
               </li>
 
               <li>
-                <a href="">About Us</a>
+                <a href="/about">About Us</a>
               </li>
 
               <li>
-                <a href="">Coaching</a>
+                <a href="/executive">Coaching</a>
               </li>
 
               <li>
-                <a href="">Blog</a>
+                <a href="/blog">Blog</a>
               </li>
 
               <li>

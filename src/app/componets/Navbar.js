@@ -22,7 +22,9 @@ const Navbar = ({ type }) => {
   return (
     <div className="navbar-container1">
       <div className="navbar-left-container">
-        <div className="navbar-logo-button"></div>
+        <div className="navbar-logo-button">
+          <img src="/images/logo.png" alt="" />
+        </div>
 
         <div className="nav-hidden">
           <div className="navbar-link-item">
