@@ -43,7 +43,11 @@ const Impact = () => {
             their business results by 21% as compared to those who never coach.
           </p>
         </div>
-        <div className="imapact-progress-container">
+        <div
+          className="imapact-progress-container"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <div className="imapact-progress-container-left">
             <h4 className="imapact-progress-container-left-heading">
               Increased Productivity

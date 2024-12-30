@@ -181,7 +181,7 @@ const BookDiscovery = () => {
                     </label>
                     <label
                       className={`radio-option ${
-                        selectedType === "corporate" ? "active" : ""
+                        selectedType === "Enterprise" ? "active" : ""
                       }`}
                     >
                       <input
@@ -245,7 +245,10 @@ const BookDiscovery = () => {
                   <div className="radio-group">
                     <label
                       className={`radio-option ${
-                        selectedProgram === "executive" ? "active" : ""
+                        selectedProgram ===
+                        "One-on-One Executive Coaching (Enterprise)"
+                          ? "active"
+                          : ""
                       }`}
                     >
                       <input
@@ -260,16 +263,39 @@ const BookDiscovery = () => {
                       />
                       One-on-One Executive Coaching (Enterprise)
                     </label>
+
                     <label
                       className={`radio-option ${
-                        selectedProgram === "personal" ? "active" : ""
+                        selectedProgram ===
+                        "Stakeholder-Centered Coaching Business Leaders(Enterprise)"
+                          ? "active"
+                          : ""
                       }`}
                     >
                       <input
                         type="radio"
                         name="coachingProgram"
-                        value="Stakeholder-Centered Coaching Business Leaders
-                      (Enterprise)"
+                        value="Stakeholder-Centered Coaching Business Leaders(Enterprise)"
+                        checked={
+                          selectedProgram ===
+                          "Stakeholder-Centered Coaching Business Leaders(Enterprise)"
+                        }
+                        onChange={handleChange}
+                      />
+                      Stakeholder-Centered Coaching Business Leaders(Enterprise)
+                    </label>
+                    {/* <label
+                      className={`radio-option ${
+                        selectedProgram ===
+                        "Stakeholder-Centered Coaching Business Leaders(Enterprise)"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="coachingProgram"
+                        value="Stakeholder-Centered Coaching Business Leaders(Enterprise)"
                         checked={
                           selectedProgram ===
                           "Stakeholder-Centered Coaching Business Leaders(Enterprise)"
@@ -278,10 +304,12 @@ const BookDiscovery = () => {
                       />
                       Stakeholder-Centered Coaching Business Leaders
                       (Enterprise)
-                    </label>
+                    </label> */}
                     <label
                       className={`radio-option ${
-                        selectedProgram === "business" ? "active" : ""
+                        selectedProgram === "One-on-One Coaching (Individual)"
+                          ? "active"
+                          : ""
                       }`}
                     >
                       <input
