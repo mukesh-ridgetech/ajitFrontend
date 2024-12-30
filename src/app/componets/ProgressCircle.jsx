@@ -35,28 +35,28 @@ const ProgressCircle = ({ initialValues = [], isHovered }) => {
   //   setIsHovered(false);
   // };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgressBars((prevBars) =>
-        prevBars.map((bar) => {
-          if (bar?.percentage < bar?.target) {
-            return { ...bar, percentage: bar?.percentage + 1 }; // Increase percentage by 1
-          } else {
-            return bar; // No change if the target is already reached
-          }
-        })
-      );
-    }, 10); // Update progress every 100ms
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setProgressBars((prevBars) =>
+  //       prevBars.map((bar) => {
+  //         if (bar?.percentage < bar?.target) {
+  //           return { ...bar, percentage: bar?.percentage + 1 }; // Increase percentage by 1
+  //         } else {
+  //           return bar; // No change if the target is already reached
+  //         }
+  //       })
+  //     );
+  //   }, 10); // Update progress every 100ms
 
-    return () => clearInterval(interval); // Clean up interval when the component unmounts
-  }, []);
+  //   return () => clearInterval(interval); // Clean up interval when the component unmounts
+  // }, []);
 
   useEffect(() => {
     let interval;
 
     if (isHovered) {
       // Reset the percentages to 0 first
-      setProgressBars(initialValues.map((bar) => ({ ...bar, percentage: 0 })));
+      // setProgressBars(initialValues.map((bar) => ({ ...bar, percentage: 0 })));
 
       // Start the interval after a short delay to ensure reset
       setTimeout(() => {

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="footer-main-section">
         <div className="footer-content-section">
           <div className="footer-logo">
-            <img src="/images/logo.png" alt="" style={{ height: "55px" }} />
+            <img src="/images/logo1.png" alt="" style={{ height: "55px" }} />
           </div>
           <div className="footer-heading">
             <h4>Get In Touch</h4>

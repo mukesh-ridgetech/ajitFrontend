@@ -48,29 +48,29 @@ const Proven = () => {
           </div>
 
           <div className="proven-para7-box">
-            <p className="proven-para1">Orientation</p>
+            <p className="proven-para2">Orientation</p>
           </div>
 
           <div className="proven-para8-box">
-            <p className="proven-para1">Coaching Sessions</p>
+            <p className="proven-para2">Coaching Sessions</p>
           </div>
 
           <div className="proven-para9-box">
-            <p className="proven-para1">Coaching Sessions</p>
+            <p className="proven-para2">Coaching Sessions</p>
           </div>
 
           <div className="proven-para10-box">
-            <p className="proven-para1">
+            <p className="proven-para2">
               Identification of AODs (Areas of Development)
             </p>
           </div>
 
           <div className="proven-para11-box">
-            <p className="proven-para1">Engagement Review</p>
+            <p className="proven-para2">Engagement Review</p>
           </div>
 
           <div className="proven-para12-box">
-            <p className="proven-para1">End of Engagement Review</p>
+            <p className="proven-para2">End of Engagement Review</p>
           </div>
         </div>
 

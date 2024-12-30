@@ -3760,7 +3760,7 @@ input[type="radio"] {
   position: absolute;
   z-index: 1;
   width: 50%;
-  top: 10%;
+  top: 16%;
   left: 50%;
 }
 
@@ -4047,8 +4047,8 @@ input[type="radio"] {
 .proven-para1-box {
   width: 40%;
   position: absolute;
-  top: 15%;
-  left: 10%;
+  top: 16%;
+  left: 9%;
 }
 
 .proven-para2-box {
@@ -4068,21 +4068,21 @@ input[type="radio"] {
 .proven-para4-box {
   width: 25%;
   position: absolute;
-  bottom: 12%;
+  bottom: 18%;
   left: -2%;
 }
 
 .proven-para5-box {
   width: 20%;
   position: absolute;
-  bottom: 12%;
+  bottom: 18%;
   left: 35%;
 }
 
 .proven-para6-box {
   width: 10%;
   position: absolute;
-  bottom: 15%;
+  bottom: 18%;
   left: 69%;
 }
 
@@ -4137,6 +4137,16 @@ input[type="radio"] {
   letter-spacing: -0.5px;
 }
 
+.proven-para2 {
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.5px;
+}
+
 .proven-main-container-heading {
   text-align: center;
   font-size: 45px;
@@ -4181,7 +4191,7 @@ input[type="radio"] {
   .proven-para1-box {
     width: 40%;
     position: absolute;
-    top: 18%;
+    top: 20%;
     left: 3%;
   }
 
@@ -4676,7 +4686,7 @@ input[type="radio"] {
 
 .about-hero-content-upper-div1 {
   width: 60%;
-  margin-left: 36%;
+  margin-left: 40%;
   margin-top: 5%;
 }
 
