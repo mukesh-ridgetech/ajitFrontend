@@ -1,9 +1,9 @@
 import React from "react";
 import ProgressCircle from "./ProgressCircle";
-const Progress = ({ initialValues }) => {
+const Progress = ({ initialValues, isHovered }) => {
   return (
     <div>
-      <ProgressCircle initialValues={initialValues} />
+      <ProgressCircle initialValues={initialValues} isHovered={isHovered} />
     </div>
   );
 };

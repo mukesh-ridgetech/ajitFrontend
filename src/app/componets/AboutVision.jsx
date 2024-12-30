@@ -23,7 +23,12 @@ const AboutVision = () => {
               </p>
             </div>
           </div>
+
+          <div className="mobile-image-div">
+            <img src="/images/mm.png" alt="" />
+          </div>
         </div>
+
         <div className="about-vision-animated-box-upper-image">
           <img src="/images/vii2.png" alt="" />
           <div className="about-vision-animated-box-upper-image-text1">
@@ -37,6 +42,10 @@ const AboutVision = () => {
               outcomes.
             </p>
           </div>
+        </div>
+
+        <div className="mobile-image-div">
+          <img src="/images/mv.png" alt="" />
         </div>
       </div>
     </div>

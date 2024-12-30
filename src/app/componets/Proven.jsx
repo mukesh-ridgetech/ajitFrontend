@@ -73,6 +73,10 @@ const Proven = () => {
             <p className="proven-para1">End of Engagement Review</p>
           </div>
         </div>
+
+        <div className="proven-images-mobile-section">
+          <img src="/images/provenM.png" alt="" />
+        </div>
       </div>
     </div>
   );

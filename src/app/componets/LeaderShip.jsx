@@ -44,6 +44,14 @@ const LeaderShip = () => {
           <p className="leadership-para">Collect input from stakeholders</p>
         </div>
       </div>
+
+      <div>
+        <h1 className="benifit-section-main-heading">
+          Stakeholder Centric Leadership Coaching Process
+        </h1>
+
+        <img src="/images/leader1.png" alt="" />
+      </div>
     </div>
   );
 };

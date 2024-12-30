@@ -381,9 +381,9 @@ const Hero = () => {
               </div>
               <div className="imagesdlkfjsldf" style={{ marginTop: "1.5%" }}>
                 <Image
-                  src="/images/h12.png"
+                  src="/images/m222.png"
                   alt="Description of the image"
-                  width={720}
+                  width={450}
                   height={300}
                 />
               </div>
@@ -476,9 +476,9 @@ const Hero = () => {
 
               <div className="imagesdlkfjsldf" style={{ marginTop: "1.5%" }}>
                 <Image
-                  src="/images/h5.png"
+                  src="/images/m333.png"
                   alt="Description of the image"
-                  width={720}
+                  width={450}
                   height={300}
                   // className=" ml-[20px]"
                 />
@@ -571,9 +571,9 @@ const Hero = () => {
 
               <div className="imagesdlkfjsldf" style={{ marginTop: "1.5%" }}>
                 <Image
-                  src="/images/h62.png"
+                  src="/images/m111.png"
                   alt="Description of the image"
-                  width={720}
+                  width={450}
                   height={300}
                 />
               </div>

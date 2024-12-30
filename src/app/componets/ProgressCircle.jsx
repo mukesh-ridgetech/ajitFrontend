@@ -11,7 +11,7 @@ import "react-circular-progressbar/dist/styles.css";
 //   { percentage: 0, target: 60 },
 // ];
 
-const ProgressCircle = ({ initialValues = [] }) => {
+const ProgressCircle = ({ initialValues = [], isHovered }) => {
   // State for managing the percentage and target for each progress bar
   const [progressBars, setProgressBars] = useState(initialValues);
 
@@ -24,6 +24,16 @@ const ProgressCircle = ({ initialValues = [] }) => {
       )
     );
   };
+
+  // const [isHovered, setIsHovered] = useState(false);
+
+  // const handleMouseEnter = () => {
+  //   setIsHovered(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,6 +51,36 @@ const ProgressCircle = ({ initialValues = [] }) => {
     return () => clearInterval(interval); // Clean up interval when the component unmounts
   }, []);
 
+  useEffect(() => {
+    let interval;
+
+    if (isHovered) {
+      // Reset the percentages to 0 first
+      setProgressBars(initialValues.map((bar) => ({ ...bar, percentage: 0 })));
+
+      // Start the interval after a short delay to ensure reset
+      setTimeout(() => {
+        interval = setInterval(() => {
+          setProgressBars((prevBars) =>
+            prevBars.map((bar) => {
+              if (bar.percentage < bar.target) {
+                return { ...bar, percentage: bar.percentage + 1 }; // Increment percentage
+              } else {
+                return bar; // Keep the bar unchanged if it reached the target
+              }
+            })
+          );
+        }, 100); // Update progress every 10ms
+      }, 100); // Add a delay of 100ms to ensure reset is visible
+    }
+
+    return () => {
+      if (interval) {
+        clearInterval(interval); // Clear the interval when `isHovered` changes or component unmounts
+      }
+    };
+  }, [isHovered, initialValues]);
+
   return (
     <div
       // style={{
@@ -49,7 +89,8 @@ const ProgressCircle = ({ initialValues = [] }) => {
       //   marginTop: "50px",
       //   height: "auto",
       // }}
-
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
       className="progress-bar-container"
     >
       {progressBars?.map((bar, index) => (

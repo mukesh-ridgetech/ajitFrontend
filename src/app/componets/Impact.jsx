@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Progress from "./Progress";
 const Impact = () => {
   const initialValues = [
@@ -14,6 +15,17 @@ const Impact = () => {
     { percentage: 0, target: 57, text: "Improved Time Management" },
     { percentage: 0, target: 51, text: "Improved Team Effectiveness" },
   ];
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <div className="main-container">
       <div className="impact-main-container">
@@ -27,7 +39,11 @@ const Impact = () => {
             their business results by 21% as compared to those who never coach.
           </p>
         </div>
-        <div className="imapact-progress-container">
+        <div
+          className="imapact-progress-container"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <div className="imapact-progress-container-left">
             <h4 className="imapact-progress-container-left-heading">
               Increased Productivity
@@ -37,7 +53,7 @@ const Impact = () => {
               latent sources of productivity
             </h6>
 
-            <Progress initialValues={initialValues} />
+            <Progress initialValues={initialValues} isHovered={isHovered} />
             <div className="imapact-progress-container-left-text">
               <div className="imapact-progress-container-left-text-para-box">
                 <p className="imapact-progress-container-left-text-para">
@@ -71,7 +87,7 @@ const Impact = () => {
               critical in meeting organizational demands.
             </h6>
 
-            <Progress initialValues={initialValues1} />
+            <Progress initialValues={initialValues1} isHovered={isHovered} />
             <div className="imapact-progress-container-left-text">
               <div className="imapact-progress-container-left-text-para-box">
                 <p className="imapact-progress-container-left-text-para">
