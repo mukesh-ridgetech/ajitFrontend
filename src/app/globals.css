@@ -4279,8 +4279,8 @@ input[type="radio"] {
 
 .Couching-div-box-main {
   display: flex;
-  width: 342px;
-  height: 205px;
+  width: 300px;
+  height: 190px;
   padding: 20px;
   flex-direction: column;
   justify-content: center;
@@ -4288,6 +4288,10 @@ input[type="radio"] {
   gap: 20px;
   border-radius: 30px;
   background: #767bf3;
+}
+
+.marque-text-now {
+  font-size: 20px;
 }
 
 .line-box {
