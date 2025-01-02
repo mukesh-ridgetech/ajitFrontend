@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const BlogContent = ({ data }) => {
+  console.log("data is now", data);
+
   return (
     <div className="main-container">
       <div className="blog-content-main-section" style={{ color: "white" }}>

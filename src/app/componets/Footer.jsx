@@ -9,7 +9,7 @@ const Footer = () => {
             <img src="/images/logo1.png" alt="" style={{ height: "55px" }} />
           </div>
           <div className="footer-heading">
-            <h4>Get In Touch</h4>
+            <h4>Contact Us</h4>
           </div>
 
           <div className="footer-navbar">
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-copyright-section">
-          <p>Copyright ©2024 All rights reserved | Company Name</p>
+          <p>Copyright ©2024 All rights reserved </p>
         </div>
       </div>
     </div>

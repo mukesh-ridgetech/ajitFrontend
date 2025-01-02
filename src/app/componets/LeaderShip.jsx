@@ -35,7 +35,7 @@ const LeaderShip = () => {
         <div className="leadership-para-box3">
           <h6 className="leadership-heading">Engage Stakeholders</h6>
           <p className="leadership-para">
-            Regular feedback and feedforward from
+            Regular feedback and feedforward from Colleagues
           </p>
         </div>
 

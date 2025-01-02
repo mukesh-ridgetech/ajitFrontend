@@ -117,7 +117,10 @@ const BookDiscovery = () => {
         <div className="book-apointment-main-container-form">
           <div className="book-apointment-main-container-form-left">
             <h2 className="sub-heading">Book Your Discovery Call</h2>
-            <h4 className="main-para" style={{ marginBottom: "13px" }}>
+            <h4
+              className="main-para11 md:text-left"
+              style={{ marginBottom: "13px" }}
+            >
               Elevate your journey. Discover how personalized coaching can
               unlock your full potential. Fill in the information below to get
               started.
@@ -282,7 +285,7 @@ const BookDiscovery = () => {
                         }
                         onChange={handleChange}
                       />
-                      Stakeholder-Centered Coaching Business Leaders(Enterprise)
+                      Stakeholder-Centered Coaching-Business Leaders(Enterprise)
                     </label>
                     {/* <label
                       className={`radio-option ${

@@ -8,10 +8,7 @@ const ABoutHero = () => {
           <h1 className="about-hero-content-heading">
             About Leadership Ladder
           </h1>
-          <p className="about-hero-content-para">
-            Empowering leaders to embrace opportunities, overcome barriers, and
-            create lasting impacts with purpose-driven growth.
-          </p>
+          <p className="about-hero-content-para">Climb Higher, Lead Smarter</p>
 
           <button className="about-hero-button">Get In Touch</button>
         </div>

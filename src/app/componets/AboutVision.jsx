@@ -11,9 +11,9 @@ const AboutVision = () => {
             </h4>
           </div>
           <div className="about-vision-animated-box-upper-image">
-            <img src="/images/vii1.png" alt="" />
+            <img src="/images/Vn.png" alt="" />
 
-            <div className="about-vision-animated-box-upper-image-text">
+            {/* <div className="about-vision-animated-box-upper-image-text">
               <h6 className="vision-heading">Vision</h6>
               <p className="vision-para">
                 To empower individuals and organizations to climb the ladder of
@@ -21,7 +21,7 @@ const AboutVision = () => {
                 full potential to create a transformative impact on their lives
                 and the world.
               </p>
-            </div>
+            </div> */}
           </div>
 
           <div className="mobile-image-div">
@@ -30,8 +30,8 @@ const AboutVision = () => {
         </div>
 
         <div className="about-vision-animated-box-upper-image">
-          <img src="/images/vii2.png" alt="" />
-          <div className="about-vision-animated-box-upper-image-text1">
+          <img src="/images/Vn1.png" alt="" />
+          {/* <div className="about-vision-animated-box-upper-image-text1">
             <h6 className="vision-heading1">Mission</h6>
             <p className="vision-para1">
               At Leadership Ladder, we are committed to providing world-class
@@ -41,7 +41,7 @@ const AboutVision = () => {
               challenges, embrace opportunities, and achieve meaningful
               outcomes.
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="mobile-image-div">

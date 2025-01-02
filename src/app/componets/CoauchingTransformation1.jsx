@@ -4,7 +4,7 @@ import CroselBox from "./CroselBox";
 
 const CoauchingTransformation1 = () => {
   return (
-    <div style={{ marginBottom: "40px" }}>
+    <div style={{ marginBottom: "40px", width: "100%" }}>
       <div className="marque-heading-box">
         <h1 className="sub-heading2">Transformative Coaching Topics</h1>
         {/* <p className="semi-heading">Personal Challenges</p> */}
@@ -12,10 +12,11 @@ const CoauchingTransformation1 = () => {
 
       <Marquee
         direction={"right"}
-        speed={"50"}
+        speed={"60"}
         loop={0}
         delay={0}
         pauseOnHover={true}
+        // className="crosel-moving-box"
       >
         <CroselBox
           i1={"/images/New.png"}
@@ -37,7 +38,7 @@ const CoauchingTransformation1 = () => {
 
         <CroselBox
           i1={"/images/New3.png"}
-          text={"Impove Performance and productivity"}
+          text={"Impoved Performance and Productivity"}
           bg={"#767BF3"}
         />
 
@@ -60,7 +61,7 @@ const CoauchingTransformation1 = () => {
 
       <Marquee
         direction={"left"}
-        speed={"50"}
+        speed={"60"}
         loop={0}
         delay={0}
         pauseOnHover={true}
@@ -80,7 +81,7 @@ const CoauchingTransformation1 = () => {
 
         <CroselBox
           i1={"/images/New7.png"}
-          text={"Increse Creativity"}
+          text={"Increased Creativity"}
           bg={"#767BF3"}
         />
 
@@ -92,13 +93,13 @@ const CoauchingTransformation1 = () => {
 
         <CroselBox
           i1={"/images/New10.png"}
-          text={"Life Skill Beyound Work"}
+          text={"Life Skill Beyond Work"}
           bg={"#767BF3"}
         />
 
         <CroselBox
           i1={"/images/New7.png"}
-          text={"Increse Creativity"}
+          text={"Increased Creativity"}
           bg={"#F5CE67"}
         />
       </Marquee>

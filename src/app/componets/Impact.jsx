@@ -3,17 +3,17 @@ import React, { useState } from "react";
 import Progress from "./Progress";
 const Impact = () => {
   const initialValues = [
-    { percentage: 0, target: 80, text: "Improved Work Performance" },
-    { percentage: 0, target: 73, text: "Improved Business Management" },
-    { percentage: 0, target: 72, text: "Improved Time Management" },
-    { percentage: 0, target: 51, text: "Improved Team Effectiveness" },
-  ];
-
-  const initialValues1 = [
     { percentage: 0, target: 70, text: "Improved Work Performance" },
     { percentage: 0, target: 61, text: "Improved Business Management" },
     { percentage: 0, target: 57, text: "Improved Time Management" },
     { percentage: 0, target: 51, text: "Improved Team Effectiveness" },
+  ];
+
+  const initialValues1 = [
+    { percentage: 0, target: 80, text: "Improved Work Performance" },
+    { percentage: 0, target: 73, text: "Improved Business Management" },
+    { percentage: 0, target: 72, text: "Improved Time Management" },
+    { percentage: 0, target: 67, text: "Improved Team Effectiveness" },
   ];
 
   const [isHovered, setIsHovered] = useState(false);

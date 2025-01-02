@@ -5,7 +5,7 @@ const CroselBox = ({ i1, text, bg }) => {
     <div>
       <div className="marques-box-container" style={{ background: `${bg}` }}>
         <div>
-          <img src={i1} alt="" style={{ height: "70px" }} />
+          <img src={i1} alt="" className="Couching-box-images" />
           {/* <div className="marque-line"></div> */}
         </div>
 

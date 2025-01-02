@@ -15,6 +15,7 @@ const Proven = () => {
           <div className="proven-para1-box">
             <p className="proven-para1">
               Leader identifies 3-4 AOD’s based on 360 degree feedback,
+              <br />
               stakeholder inputs, assessments and self-motivation
             </p>
           </div>
@@ -75,7 +76,7 @@ const Proven = () => {
         </div>
 
         <div className="proven-images-mobile-section">
-          <img src="/images/provenM.png" alt="" />
+          <img src="/images/PM1.png" alt="" />
         </div>
       </div>
     </div>

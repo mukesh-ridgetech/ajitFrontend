@@ -20,6 +20,15 @@ const BlogHero = () => {
   //   setIsOpen(false);
   // };
 
+  const scrollToBookDiscovery = () => {
+    setIsModalOpen8(false);
+    setIsModalOpen4(false);
+    const targetSection = document.getElementById("book-discovery");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const [currentImage, setCurrentImage] = useState("/images/f1.png"); // Default image
   const [currentImage1, setCurrentImage1] = useState("/images/c3.png");
 
@@ -118,7 +127,7 @@ const BlogHero = () => {
     {
       id: 3,
       question:
-        "Optimized leadership strengths that drive exceptional team performance.",
+        "What type of support should an organization provide to help leaders realize their full potential?",
       options: [
         "Establish a platform where leaders can plan, execute, and track their growth journey.",
         "Invest in programs that motivate leaders and help them discover their true potential.",
@@ -294,8 +303,8 @@ const BlogHero = () => {
               <h4 className="item-blog-para">
                 Discover how coaching serves as a transformative approach,
                 enabling individuals and organizations to achieve meaningful
-                growth. From practical strategies to profound insights, our blog
-                covers it all.
+                growth. From practical strategies to profound insights, our
+                blogs cover it all.
               </h4>
 
               <div className="hero-button-group1">
@@ -330,7 +339,9 @@ const BlogHero = () => {
 
                 <button className="hero-button2">
                   <h1 className="hero-h1-class" style={{ marginRight: "10px" }}>
-                    Connect On LinkedIn
+                    <a href="https://www.linkedin.com/in/ajit-aj-jain/">
+                      Connect On LinkedIn
+                    </a>
                   </h1>
                   {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -678,14 +689,12 @@ const BlogHero = () => {
           <div className="tankyou-conatainer">
             <div className="tankyou-conatainer-left">
               <div>
-                <h1 className="tankyou-heading">Thank You For Taking Quiz</h1>
+                <h1 className="tankyou-heading">Thank You for Taking Quiz</h1>
                 <p className="thank-para">
-                  Your responses reflect a strong commitment to fostering
-                  meaningful change within your organization’s leadership.
-                  Executive Coaching and Stakeholder-Centered Coaching are
-                  transformative solutions that can enhance leadership
-                  performance, cultivate a culture of excellence, and amplify
-                  your organization’s overall impact.
+                  Your responses reflect your unique journey and aspirations.
+                  Coaching can be a powerful tool to support you in becoming the
+                  best version of yourself! Take the next step towards your
+                  growth and fulfillment!
                 </p>
               </div>
 
@@ -702,18 +711,27 @@ const BlogHero = () => {
                 </h2>
                 <ul>
                   <li>
-                    <p className="para1">
-                      Discover Our Services: Visit our [Home Page] to explore
-                      how our coaching programs can support your leaders and
-                      drive organizational growth.
+                    <p className="para1" style={{ textAlign: "left" }}>
+                      Explore our coaching services on the{" "}
+                      <a href="/">
+                        {" "}
+                        <u>[Home Page]</u>{" "}
+                      </a>
+                       to see how we can support your growth.
                     </p>
                   </li>
 
                   <li>
-                    <p className="para1">
-                      Contact Us: Have questions or want to learn more? Reach
-                      out to us through the [Contact Us] page, and we’ll be
-                      happy to assist you.
+                    <p className="para1" style={{ textAlign: "left" }}>
+                      <span style={{ fontWeight: "bold" }}>Contact Us:</span>{" "}
+                       Have questions or want to learn more? Reach out to us
+                      through the{" "}
+                      <a href="/#book-discovery">
+                        <span>
+                          <u>[Contact Us]</u>
+                        </span>
+                      </a>
+                       page, and we’ll be happy to assist you.
                     </p>
                   </li>
                 </ul>
@@ -722,8 +740,7 @@ const BlogHero = () => {
               <div>
                 <h2 className="para3">
                   <span id="span">
-                    Together, we can unlock the full potential of your leaders
-                    and take your organization to new heights.
+                    Start your journey toward growth and fulfilment today!
                   </span>
                   <br />
                   <br /> We look forward to partnering with you.
@@ -761,7 +778,7 @@ const BlogHero = () => {
           <div className="tankyou-conatainer">
             <div className="tankyou-conatainer-left">
               <div>
-                <h1 className="tankyou-heading">Thank You For Taking Quiz</h1>
+                <h1 className="tankyou-heading">Thank You for Taking Quiz</h1>
                 <p className="thank-para">
                   Your responses reflect a strong commitment to fostering
                   meaningful change within your organization’s leadership.
@@ -785,18 +802,31 @@ const BlogHero = () => {
                 </h2>
                 <ul>
                   <li>
-                    <p className="para1">
-                      Discover Our Services: Visit our [Home Page] to explore
-                      how our coaching programs can support your leaders and
-                      drive organizational growth.
+                    <p className="para1" style={{ textAlign: "left" }}>
+                      <span style={{ fontWeight: "bold" }}>
+                        Discover Our Services:
+                      </span>{" "}
+                       Visit our{" "}
+                      <a href="/">
+                        {" "}
+                        <u>[Home Page]</u>
+                      </a>{" "}
+                       to explore how our coaching programs can support your
+                      leaders and drive organizational growth.
                     </p>
                   </li>
 
                   <li>
-                    <p className="para1">
-                      Contact Us: Have questions or want to learn more? Reach
-                      out to us through the [Contact Us] page, and we’ll be
-                      happy to assist you.
+                    <p className="para1" style={{ textAlign: "left" }}>
+                      <span style={{ fontWeight: "bold" }}>Contact Us:</span>{" "}
+                       Have questions or want to learn more? Reach out to us
+                      through the{" "}
+                      <a href="/#book-discovery">
+                        <span>
+                          <u>[Contact Us]</u>
+                        </span>
+                      </a>
+                       page, and we’ll be happy to assist you.
                     </p>
                   </li>
                 </ul>

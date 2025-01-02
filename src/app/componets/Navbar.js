@@ -11,6 +11,13 @@ const Navbar = ({ type }) => {
     setActive(item);
   };
 
+  const scrollToBookDiscovery = () => {
+    const targetSection = document.getElementById("book-discovery");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleMenuClick = () => {
     setMenuOpen(!menuOpen);
   };
@@ -75,10 +82,7 @@ const Navbar = ({ type }) => {
                     </li>
 
                     <li>
-                      <a href="/coaching">
-                        One-on-One Coaching (Personal/Professional Growth)-
-                        Individual
-                      </a>
+                      <a href="/coaching">One-on-One Coaching (Individual)</a>
                     </li>
                   </ul>
                 </div>
@@ -95,7 +99,9 @@ const Navbar = ({ type }) => {
             </ul>
           </div>
 
-          <button className="navbar-button">Contact Us</button>
+          <button className="navbar-button" onClick={scrollToBookDiscovery}>
+            Contact Us
+          </button>
         </div>
 
         <button className="menu-icon mobile" onClick={handleMenuClick}>
@@ -156,10 +162,7 @@ const Navbar = ({ type }) => {
                       </li>
 
                       <li>
-                        <a href="/coaching">
-                          One-on-One Coaching (Personal/Professional Growth)-
-                          Individual
-                        </a>
+                        <a href="/coaching">One-on-One Coaching (Individual)</a>
                       </li>
                     </ul>
                   </div>

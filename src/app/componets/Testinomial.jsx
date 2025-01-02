@@ -192,7 +192,7 @@ const Testinomial = () => {
                   <div className="testinomial-content">
                     <h3 className="testinomial-title">{item?.title}</h3>
                     <h4 className="testinomial-heading">{item?.heding}</h4>
-                    <p className="para" style={{ marginBottom: "10px" }}>
+                    <p className="para5" style={{ marginBottom: "10px" }}>
                       {item?.content}
                     </p>
 

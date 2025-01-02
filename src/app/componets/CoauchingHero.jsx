@@ -12,9 +12,9 @@ const CoauchingHero = () => {
         <h1 className="couaching-hero-heading">Executive Coaching</h1>
       </div>
 
-      <div className="couching-button">
+      {/* <div className="couching-button">
         <button className="navbar-button">Get in Touch</button>
-      </div>
+      </div> */}
     </div>
   );
 };

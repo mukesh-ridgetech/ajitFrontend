@@ -4,7 +4,7 @@ const CoachingsHero = () => {
   return (
     <div className="about-hero-container1">
       <div className="about-hero-content1">
-        <div className="about-hero-content-upper-div1">
+        <div className="about-hero-content-upper-div3">
           <h1 className="about-hero-content-heading1">
             Stakeholder-Centered Coaching
           </h1>

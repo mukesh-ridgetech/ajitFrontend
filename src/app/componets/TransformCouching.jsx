@@ -1,6 +1,21 @@
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const TransformCouching = () => {
+  const router = useRouter();
+
+  const handleNavigate1 = () => {
+    router.push("/executive");
+  };
+
+  const handleNavigate2 = () => {
+    router.push("/stake-holder");
+  };
+
+  const handleNavigate3 = () => {
+    router.push("/coaching");
+  };
   return (
     <div className="main-container">
       <div className="transform-couching-main-container">
@@ -45,7 +60,7 @@ const TransformCouching = () => {
                   objectives.
                 </p>
               </div>
-              <div>
+              <div onClick={handleNavigate1} style={{ cursor: "pointer" }}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -81,7 +96,7 @@ const TransformCouching = () => {
                   and stakeholders.
                 </p>
               </div>
-              <div>
+              <div onClick={handleNavigate2} style={{ cursor: "pointer" }}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -89,6 +104,7 @@ const TransformCouching = () => {
                   viewBox="0 0 21 21"
                   fill="none"
                   className="transfrom-arrow"
+                  // onClick={handleNavigate2}
                 >
                   <path
                     d="M19.8815 20.5H6.94817C6.72595 20.5 6.52595 20.4222 6.34817 20.2667C6.17039 20.1111 6.0815 19.9111 6.0815 19.6667C6.0815 19.4222 6.17039 19.2111 6.34817 19.0333C6.52595 18.8556 6.72595 18.7667 6.94817 18.7667H17.8148L1.01484 1.96667C0.837058 1.78889 0.748169 1.57778 0.748169 1.33333C0.748169 1.08889 0.825947 0.888889 0.981502 0.733333C1.13706 0.577778 1.33706 0.5 1.5815 0.5C1.82595 0.5 2.03706 0.588889 2.21484 0.766667L19.0148 17.5667V6.7C19.0148 6.47778 19.1037 6.27778 19.2815 6.1C19.4593 5.92222 19.6704 5.83333 19.9148 5.83333C20.1593 5.83333 20.3593 5.92222 20.5148 6.1C20.6704 6.27778 20.7482 6.47778 20.7482 6.7V19.6333C20.7482 19.9 20.6704 20.1111 20.5148 20.2667C20.3593 20.4222 20.1482 20.5 19.8815 20.5Z"
@@ -101,7 +117,10 @@ const TransformCouching = () => {
 
           <div className="transform-couching-tab-section-main">
             <div className="transform-couching-tab-section-main-left">
-              <h4 className="para3">One-on-One Coaching (Individual)</h4>
+              <h4 className="para3">
+                One-on-One Coaching <br />
+                (Individual)
+              </h4>
             </div>
 
             <div className="transform-couching-tab-section-main-right">
@@ -115,7 +134,7 @@ const TransformCouching = () => {
                   holistic journey toward personal and professional excellence.
                 </p>
               </div>
-              <div>
+              <div onClick={handleNavigate3} style={{ cursor: "pointer" }}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -123,6 +142,7 @@ const TransformCouching = () => {
                   viewBox="0 0 21 21"
                   fill="none"
                   className="transfrom-arrow"
+                  // onClick={handleNavigate3}
                 >
                   <path
                     d="M19.8815 20.5H6.94817C6.72595 20.5 6.52595 20.4222 6.34817 20.2667C6.17039 20.1111 6.0815 19.9111 6.0815 19.6667C6.0815 19.4222 6.17039 19.2111 6.34817 19.0333C6.52595 18.8556 6.72595 18.7667 6.94817 18.7667H17.8148L1.01484 1.96667C0.837058 1.78889 0.748169 1.57778 0.748169 1.33333C0.748169 1.08889 0.825947 0.888889 0.981502 0.733333C1.13706 0.577778 1.33706 0.5 1.5815 0.5C1.82595 0.5 2.03706 0.588889 2.21484 0.766667L19.0148 17.5667V6.7C19.0148 6.47778 19.1037 6.27778 19.2815 6.1C19.4593 5.92222 19.6704 5.83333 19.9148 5.83333C20.1593 5.83333 20.3593 5.92222 20.5148 6.1C20.6704 6.27778 20.7482 6.47778 20.7482 6.7V19.6333C20.7482 19.9 20.6704 20.1111 20.5148 20.2667C20.3593 20.4222 20.1482 20.5 19.8815 20.5Z"
