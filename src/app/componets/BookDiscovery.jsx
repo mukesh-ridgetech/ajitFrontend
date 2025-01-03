@@ -116,7 +116,7 @@ const BookDiscovery = () => {
       <div className="book-apointment-main-container" id="book-discovery">
         <div className="book-apointment-main-container-form">
           <div className="book-apointment-main-container-form-left">
-            <h2 className="sub-heading">Book Your Discovery Call</h2>
+            <h2 className="sub-heading-book">Book Your Discovery Call</h2>
             <h4
               className="main-para11 md:text-left"
               style={{ marginBottom: "13px" }}
@@ -267,7 +267,7 @@ const BookDiscovery = () => {
                       One-on-One Executive Coaching (Enterprise)
                     </label>
 
-                    <label
+                    {/* <label
                       className={`radio-option ${
                         selectedProgram ===
                         "Stakeholder-Centered Coaching Business Leaders(Enterprise)"
@@ -286,7 +286,8 @@ const BookDiscovery = () => {
                         onChange={handleChange}
                       />
                       Stakeholder-Centered Coaching-Business Leaders(Enterprise)
-                    </label>
+                    </label> */}
+
                     {/* <label
                       className={`radio-option ${
                         selectedProgram ===
@@ -308,6 +309,28 @@ const BookDiscovery = () => {
                       Stakeholder-Centered Coaching Business Leaders
                       (Enterprise)
                     </label> */}
+
+                    <label
+                      className={`radio-option ${
+                        selectedProgram ===
+                        "Stakeholder-Centered Coaching Business Leaders(Enterprise)"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name="coachingProgram"
+                        value="Stakeholder-Centered Coaching Business Leaders(Enterprise)"
+                        checked={
+                          selectedProgram ===
+                          "Stakeholder-Centered Coaching Business Leaders(Enterprise)"
+                        }
+                        onChange={handleChange}
+                      />
+                      Stakeholder-Centered Coaching-Business Leaders(Enterprise)
+                    </label>
+
                     <label
                       className={`radio-option ${
                         selectedProgram === "One-on-One Coaching (Individual)"
@@ -340,14 +363,14 @@ const BookDiscovery = () => {
                     border: "1px solid #22272C",
                     background: "#050709",
                     color: "white",
-                    marginTop: "20px",
                   }}
                   placeholder="Query/Message"
                   value={formData.message}
                   onChange={handleInputChange}
+                  className="mt-[3px] lg:mt-[20px] "
                 ></textarea>
 
-                <div style={{ marginTop: "20px" }}>
+                <div className=" md:mt-[6px] lg:mt-[20px] md:items-center md:m-auto book-discovery-botton">
                   <button type="submit" className="navbar-button">
                     Send Message
                   </button>

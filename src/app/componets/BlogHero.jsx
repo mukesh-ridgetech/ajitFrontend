@@ -378,13 +378,25 @@ const BlogHero = () => {
             {/* <img src="/images/h1.png" alt="" className="image-class" /> */}
 
             <div className="item-blog-image-section">
-              <img
-                src="/images/m5.png"
-                alt="Description of the image"
-                width={700}
-                height={500}
-                className="image-class"
-              />
+              <div className=" about-hero-image-desk">
+                <img
+                  src="/images/m5.png"
+                  alt="Description of the image"
+                  width={700}
+                  height={500}
+                  className="image-class"
+                />
+              </div>
+
+              <div className=" about-hero-image-mob">
+                <img
+                  src="/images/HeroM1.png"
+                  alt="Description of the image"
+                  width={700}
+                  height={500}
+                  className="image-class"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -713,9 +725,9 @@ const BlogHero = () => {
                   <li>
                     <p className="para1" style={{ textAlign: "left" }}>
                       Explore our coaching services on the{" "}
-                      <a href="/">
+                      <a href="/#transformation">
                         {" "}
-                        <u>[Home Page]</u>{" "}
+                        <u style={{ color: "#f5ce67" }}>[Home Page]</u>{" "}
                       </a>
                        to see how we can support your growth.
                     </p>
@@ -728,7 +740,9 @@ const BlogHero = () => {
                       through the{" "}
                       <a href="/#book-discovery">
                         <span>
-                          <u>[Contact Us]</u>
+                          <u style={{ color: "#f5ce67", cursor: "pointer" }}>
+                            [Contact Us]
+                          </u>
                         </span>
                       </a>
                        page, and we’ll be happy to assist you.
@@ -807,9 +821,9 @@ const BlogHero = () => {
                         Discover Our Services:
                       </span>{" "}
                        Visit our{" "}
-                      <a href="/">
+                      <a href="/#transformation">
                         {" "}
-                        <u>[Home Page]</u>
+                        <u style={{ color: "#f5ce67" }}>[Home Page]</u>
                       </a>{" "}
                        to explore how our coaching programs can support your
                       leaders and drive organizational growth.
@@ -823,7 +837,9 @@ const BlogHero = () => {
                       through the{" "}
                       <a href="/#book-discovery">
                         <span>
-                          <u>[Contact Us]</u>
+                          <u style={{ color: "#f5ce67", cursor: "pointer" }}>
+                            [Contact Us]
+                          </u>
                         </span>
                       </a>
                        page, and we’ll be happy to assist you.

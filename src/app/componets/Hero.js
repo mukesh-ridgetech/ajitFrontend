@@ -38,6 +38,15 @@ const Hero = () => {
     }
   };
 
+  const scrollToBookDiscovery1 = () => {
+    setIsModalOpen8(false);
+    setIsModalOpen4(false);
+    const targetSection = document.getElementById("transformation");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleMouseEnter1 = () => {
     setCurrentImage1("/images/h7.png"); // Hover image
   };
@@ -919,10 +928,12 @@ const Hero = () => {
                   <li>
                     <p className="para1" style={{ textAlign: "left" }}>
                       Explore our coaching services on the{" "}
-                      <a href="/">
+                      <span onClick={scrollToBookDiscovery1}>
                         {" "}
-                        <u>[Home Page]</u>{" "}
-                      </a>
+                        <u style={{ color: "#f5ce67", cursor: "pointer" }}>
+                          [Home Page]
+                        </u>{" "}
+                      </span>
                        to see how we can support your growth.
                     </p>
                   </li>
@@ -933,7 +944,9 @@ const Hero = () => {
                        Have questions or want to learn more? Reach out to us
                       through the{" "}
                       <span onClick={scrollToBookDiscovery}>
-                        <u>[Contact Us]</u>
+                        <u style={{ color: "#f5ce67", cursor: "pointer" }}>
+                          [Contact Us]
+                        </u>
                       </span>
                        page, and we’ll be happy to assist you.
                     </p>
@@ -1011,9 +1024,9 @@ const Hero = () => {
                         Discover Our Services:
                       </span>{" "}
                        Visit our{" "}
-                      <a href="/">
+                      <a href="/#transformation">
                         {" "}
-                        <u>[Home Page]</u>
+                        <u style={{ color: "#f5ce67" }}>[Home Page]</u>
                       </a>{" "}
                        to explore how our coaching programs can support your
                       leaders and drive organizational growth.
@@ -1027,7 +1040,7 @@ const Hero = () => {
                       through the{" "}
                       <span onClick={scrollToBookDiscovery}>
                         {" "}
-                        <u>[Contact Us]</u>{" "}
+                        <u style={{ color: "#f5ce67" }}>[Contact Us]</u>{" "}
                       </span>{" "}
                        page, and we’ll be happy to assist you.
                     </p>

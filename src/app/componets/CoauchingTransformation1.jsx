@@ -4,7 +4,10 @@ import CroselBox from "./CroselBox";
 
 const CoauchingTransformation1 = () => {
   return (
-    <div style={{ marginBottom: "40px", width: "100%" }}>
+    <div
+      style={{ marginBottom: "40px", width: "100%" }}
+      className="md:mb-[0px] lg:mb-[40px]"
+    >
       <div className="marque-heading-box">
         <h1 className="sub-heading2">Transformative Coaching Topics</h1>
         {/* <p className="semi-heading">Personal Challenges</p> */}
@@ -66,6 +69,7 @@ const CoauchingTransformation1 = () => {
         delay={0}
         pauseOnHover={true}
         style={{ marginTop: "40px" }}
+        className=" md:mt-[24px] lg:mt-[40px]"
       >
         <CroselBox
           i1={"/images/New6.png"}

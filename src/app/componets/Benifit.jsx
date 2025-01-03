@@ -33,7 +33,7 @@ const Benifit = () => {
           </div>
 
           <div className="benifit-para-section-now-box1">
-            <p className="para">
+            <p className="stack-para">
               A distinctive methodology that places stakeholders at the core,
               utilizing Feedforward to enhance selected leadership skills. This
               approach emphasizes both behavioral change and perception shifts,

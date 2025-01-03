@@ -18,7 +18,7 @@ const TransformCouching = () => {
   };
   return (
     <div className="main-container">
-      <div className="transform-couching-main-container">
+      <div className="transform-couching-main-container" id="transformation">
         <div className="transfrom-couching-heading-section">
           <div className="t-heading">
             <h1 className="sub-heading">
@@ -38,7 +38,11 @@ const TransformCouching = () => {
           </div>
         </div>
 
-        <div className="transform-couching-tab-section">
+        <div
+          className="transform-couching-tab-section"
+          onClick={handleNavigate1}
+          style={{ cursor: "pointer" }}
+        >
           <div id="transform-couching-tab-section-main-default">
             <div className="transform-couching-tab-section-main-left">
               <h4 className="para3">
@@ -60,7 +64,7 @@ const TransformCouching = () => {
                   objectives.
                 </p>
               </div>
-              <div onClick={handleNavigate1} style={{ cursor: "pointer" }}>
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -78,7 +82,11 @@ const TransformCouching = () => {
             </div>
           </div>
 
-          <div className="transform-couching-tab-section-main">
+          <div
+            className="transform-couching-tab-section-main"
+            onClick={handleNavigate2}
+            style={{ cursor: "pointer" }}
+          >
             <div className="transform-couching-tab-section-main-left">
               <h4 className="para3">
                 Stakeholder-Centered Coaching Business Leaders (Enterprise)
@@ -96,7 +104,7 @@ const TransformCouching = () => {
                   and stakeholders.
                 </p>
               </div>
-              <div onClick={handleNavigate2} style={{ cursor: "pointer" }}>
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -115,7 +123,11 @@ const TransformCouching = () => {
             </div>
           </div>
 
-          <div className="transform-couching-tab-section-main">
+          <div
+            className="transform-couching-tab-section-main"
+            onClick={handleNavigate3}
+            style={{ cursor: "pointer" }}
+          >
             <div className="transform-couching-tab-section-main-left">
               <h4 className="para3">
                 One-on-One Coaching <br />
@@ -134,7 +146,7 @@ const TransformCouching = () => {
                   holistic journey toward personal and professional excellence.
                 </p>
               </div>
-              <div onClick={handleNavigate3} style={{ cursor: "pointer" }}>
+              <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"

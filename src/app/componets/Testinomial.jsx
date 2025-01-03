@@ -11,7 +11,7 @@ const Testinomial = () => {
       title: "Ashish Syngal",
       heding: "SVP, Customer Success ProHance ",
       content:
-        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
+        " \"Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual. \"",
       image: "/images/t1.png",
       bgColor: "#4caf50",
       rating: 5,
@@ -19,47 +19,47 @@ const Testinomial = () => {
 
     {
       id: 2,
-      title: "shfgksdjgh",
-      heding: "we all have the potential to grow and achieve",
+      title: "Prashant Singh",
+      heding: "Ex-Investment Banker (HSBC London/Hong Kong) & Entrepreneur",
       content:
-        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
-      image: "/images/bg1.png",
+        '  "I was initially skeptical about coaching, but Ajit’s ability to simplify complex ideas quickly drew me in. He created a safe space where I could explore my blind spots and challenge my beliefs.This process led to invaluable self-discovery and clarity on areas for growth, helping me build a more fulfilling entrepreneurial path. Thank you, Ajit!  "',
+      image: "/images/Prashant Singh 1.png",
       bgColor: "#4caf50",
       rating: 4,
     },
 
     {
       id: 3,
-      title: "shfgksdjgh",
-      heding: "we all have the potential to grow and achieve",
+      title: "Sesha Sai",
+      heding: "Corporate Executive",
       content:
-        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
-      image: "/images/bg2.png",
+        '  "I had the privilege of being coached by Ajit. In every session, he helped me find clear answers to my questions. He is a great listener, very focused, and never judges. Ajit\'s humility and service-oriented nature are rare in coaching. I always look forward to our sessions. Thank you, Ajit, for always being there when I needed you.  "',
+      image: "/images/image.png",
       bgColor: "#4caf50",
       rating: 3,
     },
 
-    {
-      id: 4,
-      title: "shfgksdjgh",
-      heding: "we all have the potential to grow and achieve",
-      content:
-        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
-      image: "/images/bh3.png",
-      bgColor: "#4caf50",
-      rating: 5,
-    },
+    // {
+    //   id: 4,
+    //   title: "shfgksdjgh",
+    //   heding: "we all have the potential to grow and achieve",
+    //   content:
+    //     " quote: \"Ajit has the ability to help me tease out the real issue at hand and has the presence to hold the space for me to go deep inside to explore my obstacles as well as my resources. He has helped me create action plans that stick and I have seen changes in my personal as well as professional life that I thought were not possible. I can full-heartedly recommend working with Ajit. quote: \"",
+    //   image: "/images/bh3.png",
+    //   bgColor: "#4caf50",
+    //   rating: 5,
+    // },
 
-    {
-      id: 4,
-      title: "shfgksdjgh",
-      heding: "we all have the potential to grow and achieve",
-      content:
-        "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
-      image: "/images/bh3.png",
-      bgColor: "#4caf50",
-      rating: 5,
-    },
+    // {
+    //   id: 4,
+    //   title: "shfgksdjgh",
+    //   heding: "we all have the potential to grow and achieve",
+    //   content:
+    //     "Ajit's coaching has transformed my life. His expert guidance has empowered me to achieve a harmonious balance between my personal and professional goals. I'm incredibly grateful for his support in helping me become a more well-rounded individual.",
+    //   image: "/images/bh3.png",
+    //   bgColor: "#4caf50",
+    //   rating: 5,
+    // },
   ];
 
   const responsive = {
@@ -191,7 +191,12 @@ const Testinomial = () => {
 
                   <div className="testinomial-content">
                     <h3 className="testinomial-title">{item?.title}</h3>
-                    <h4 className="testinomial-heading">{item?.heding}</h4>
+                    <h4
+                      className="testinomial-heading"
+                      style={{ textAlign: "center", height: "70px" }}
+                    >
+                      {item?.heding}
+                    </h4>
                     <p className="para5" style={{ marginBottom: "10px" }}>
                       {item?.content}
                     </p>

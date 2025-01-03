@@ -75,7 +75,7 @@ const CoauchingTransformation = () => {
       </Marquee>
 
       <div className="marque-heading-box">
-        <p className="semi-heading" style={{ marginTop: "24px" }}>
+        <p className="semi-heading md:mt-[10px] lg:mt-[24px]">
           Professional Challenges
         </p>
       </div>

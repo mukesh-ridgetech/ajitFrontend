@@ -5,13 +5,13 @@ const AboutVision = () => {
     <div className="about-vision-container">
       <div className="about-vision-animated-box">
         <div className="about-vision-animated-box-upper">
-          <div className="about-vision-text-box">
-            <h4 className="about-vision-animated-box-upper-heading">
-              Our Vision & Mission
-            </h4>
-          </div>
           <div className="about-vision-animated-box-upper-image">
-            <img src="/images/Vn.png" alt="" />
+            <div className="about-vision-text-box">
+              <h4 className="about-vision-animated-box-upper-heading">
+                Our Vision & <br /> Mission
+              </h4>
+            </div>
+            <img src="/images/Vis111.png" alt="" />
 
             {/* <div className="about-vision-animated-box-upper-image-text">
               <h6 className="vision-heading">Vision</h6>
@@ -23,9 +23,13 @@ const AboutVision = () => {
               </p>
             </div> */}
           </div>
-
-          <div className="mobile-image-div">
-            <img src="/images/mm.png" alt="" />
+          <div className="vising-image-mobile-text">
+            <h4 className="about-vision-animated-box-upper-heading">
+              Our Vision & Mission
+            </h4>
+            <div className="mobile-image-div">
+              <img src="/images/Vis1.png" alt="" />
+            </div>
           </div>
         </div>
 
@@ -44,8 +48,8 @@ const AboutVision = () => {
           </div> */}
         </div>
 
-        <div className="mobile-image-div">
-          <img src="/images/mv.png" alt="" />
+        <div className="mobile-image-div1">
+          <img src="/images/Mis1.png" alt="" />
         </div>
       </div>
     </div>

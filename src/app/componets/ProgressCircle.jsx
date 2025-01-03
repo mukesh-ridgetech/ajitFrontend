@@ -74,8 +74,8 @@ const ProgressCircle = ({ initialValues = [], isHovered }) => {
               }
             })
           );
-        }, 100); // Update progress every 10ms
-      }, 100); // Add a delay of 100ms to ensure reset is visible
+        }, 10); // Update progress every 10ms
+      }, 10); // Add a delay of 100ms to ensure reset is visible
     }
 
     return () => {

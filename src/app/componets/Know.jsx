@@ -6,7 +6,7 @@ const Know = () => {
       <div className="about-know-container">
         <div className="about-know-content">
           <div className="about-image-section">
-            <img src="/images/k1.png" alt="" />
+            <img src="/images/k1.png" alt="" className="know-image" />
           </div>
           <div className="about-know-content-section">
             <h4 className="about-know-content-section-heading">

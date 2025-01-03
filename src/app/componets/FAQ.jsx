@@ -13,7 +13,7 @@ const FAQ = ({ faqs }) => {
       {faqs?.map((faq, index) => (
         <div
           key={index}
-          className={`py-[15px] ${
+          className={`lg:py-[15px] py-[8px] ${
             activeIndex === index
               ? " custom-gradient text-white rounded-md"
               : "bg-[#140C1C]"
